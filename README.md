@@ -7,3 +7,9 @@
 	I finished the compulsory. I had some problems with the project, when I pressed Submit on the form I was redirected to an error page 404, and even though I tried to change the servlet setup, it did not work.
 - **Homework**
 	In progress...
+
+## Laboratory 2
+- **Compulsory**
+	I finished part of the compulsory, only sending one parameter from one .jsp file to another. 
+- **Homework**
+	In progress...
