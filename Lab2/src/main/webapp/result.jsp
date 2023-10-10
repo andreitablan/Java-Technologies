@@ -2,32 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Graph Properties</title>
+  <title>Received Parameter</title>
 </head>
 <body>
-<h1>Graph Properties</h1>
+<h1>Received Parameter</h1>
 
 <%
-  int order = (int) request.getAttribute("order");
-  int size = (int) request.getAttribute("size");
-  int numComponents = (int) request.getAttribute("numComponents");
-  int minDegree = (int) request.getAttribute("minDegree");
-  int maxDegree = (int) request.getAttribute("maxDegree");
-  double avgDegree = (double) request.getAttribute("avgDegree");
-  int diameter = (int) request.getAttribute("diameter");
-  int radius = (int) request.getAttribute("radius");
+  String parameter = request.getParameter("param");
 %>
 
-<%-- Display graph properties --%>
-<p>Order: <%= order %></p>
-<p>Size: <%= size %></p>
-<p>Number of Connected Components: <%= numComponents %></p>
-<p>Minimum Degree: <%= minDegree %></p>
-<p>Maximum Degree: <%= maxDegree %></p>
-<p>Average Degree: <%= avgDegree %></p>
-<p>Diameter: <%= diameter %></p>
-<p>Radius: <%= radius %></p>
+<%-- Display the received parameter --%>
+<p>Parameter: <%= parameter %></p>
 
 </body>
 </html>
-

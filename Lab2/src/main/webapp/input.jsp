@@ -2,14 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Upload Graph in DIMACS Format</title>
+    <title>Send Parameter</title>
 </head>
 <body>
-<h1>Upload Graph in DIMACS Format</h1>
-<form action="upload"> " method="post" enctype="multipart/form-data">
-    <label for="file">Select a file:</label>
-    <input type="file" id="file" name="file"><br><br>
-    <input type="submit" value="Upload">
+<h1>Send Parameter</h1>
+<form action="result.jsp" method="get">
+    <label for="parameter">Enter a parameter:</label>
+    <input type="text" id="parameter" name="param">
+    <br><br>
+    <input type="submit" value="Send">
 </form>
 </body>
 </html>
