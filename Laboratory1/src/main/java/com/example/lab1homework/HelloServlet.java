@@ -37,7 +37,6 @@ public class HelloServlet extends HttpServlet {
             try (PrintWriter out = response.getWriter()) {
                 String number = request.getParameter("number");
                 int num = Integer.parseInt(number);
-
                 out.println("<html>");
                 out.println("<head><title>Number Servlet</title></head>");
                 out.println("<body>");
@@ -65,6 +64,7 @@ public class HelloServlet extends HttpServlet {
 
             }
         }
+
     }
 
     public void destroy() {
