@@ -1,20 +1,10 @@
 package com.example.lab1homework;
 
 import java.io.*;
-import java.util.Iterator;
-import java.util.function.Supplier;
-
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-import org.jgrapht.Graph;
-import org.jgrapht.graph.DefaultEdge;
-import org.jgrapht.graph.SimpleGraph;
-import org.jgrapht.generate.*;
-import org.jgrapht.graph.*;
-import org.jgrapht.traverse.DepthFirstIterator;
-import org.jgrapht.util.*;
 import java.util.*;
 @WebServlet(name = "helloServlet", value = "/helloServlet")
 public class HelloServlet extends HttpServlet {

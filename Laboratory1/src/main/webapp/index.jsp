@@ -8,5 +8,7 @@
 <h1><%= "Hello World!" %></h1>
 <br/>
 <a href="helloServlet">Compulsory</a>
+<br/>
+<a href="generateTree">Homework</a>
 </body>
 </html>
