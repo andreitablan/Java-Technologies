@@ -1,6 +1,8 @@
 package com.example.lab1homework;
 
 import java.io.*;
+import java.util.*;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
@@ -8,7 +10,29 @@ import jakarta.servlet.annotation.*;
 
 @WebServlet(name = "generateTree", value = "/generateTree")
 public class TreeAdjacencyMatrixServlet extends HttpServlet {
+    /**
+     * Handles HTTP GET requests.
+     * @param request
+     * @param response
+     * @throws IOException
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String httpMethod = request.getMethod();
+        String ipAddress = request.getRemoteAddr();
+        String userAgent = request.getHeader("User-Agent");
+        Enumeration<Locale> locales = request.getLocales();
+        StringBuilder languages = new StringBuilder();
+        while (locales.hasMoreElements()) {
+            Locale locale = locales.nextElement();
+            languages.append(locale.toLanguageTag()).append(", ");
+        }
+        String paramValue = request.getParameter("numVertices");
+
+        log("HTTP Method: " + httpMethod);
+        log("IP Address: " + ipAddress);
+        log("User-Agent: " + userAgent);
+        log("Client Languages: " + languages.toString());
+        log("Number of Vertices: " + paramValue);
         response.setContentType("text/html");
         if(request.getParameter("numVertices")==null)
         {
@@ -27,10 +51,17 @@ public class TreeAdjacencyMatrixServlet extends HttpServlet {
                 out.println("<html><body>");
                 out.println("<h2>Adjacency Matrix of Random Tree with " + numberVertices + " Vertices:</h2>");
                 out.println("<table border='1'>");
-                for (int i = 0; i < numberVertices; i++) {
+                out.print("<tr>");
+                out.print("<th></th>");
+                for (int index = 0; index < numberVertices; index++) {
+                    out.print("<th>" + index + "</th>");
+                }
+                out.print("</tr>");
+                for (int vertex = 0; vertex < numberVertices; vertex++) {
                     out.print("<tr>");
-                    for (int j = 0; j < numberVertices; j++) {
-                        out.print("<td>" + adjacencyMatrix[i][j] + "</td>");
+                    out.print("<th>" + vertex + "</th>");
+                    for (int otherVertex = 0; otherVertex < numberVertices; otherVertex++) {
+                        out.print("<td>" + adjacencyMatrix[vertex][otherVertex] + "</td>");
                     }
                     out.println("</tr>");
                 }
@@ -42,12 +73,41 @@ public class TreeAdjacencyMatrixServlet extends HttpServlet {
     }
 
     /**
-     * Generates a random tree adjacency matrix with the specified number of vertices.
-     * @param numberVertices the number of vertices in the tree
-     * @return a random tree adjacency matrix with the specified number of vertices
+     * Generates a random tree adjacency matrix with the given number of vertices.
+     * @param numVertices
+     * @return
      */
-    private int[][] generateRandomTreeAdjacencyMatrix(int numberVertices) {
-        int[][] myArray = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        return myArray;
+    public static int[][] generateRandomTreeAdjacencyMatrix(int numVertices) {
+        int[][] adjacencyMatrix = new int[numVertices][numVertices];
+
+        List<Integer> remainingVertices = new ArrayList<>();
+        for (int i = 0; i < numVertices; i++) {
+            remainingVertices.add(i);
+        }
+
+        Random random = new Random();
+        int rootNode = random.nextInt(numVertices);
+        remainingVertices.remove(Integer.valueOf(rootNode));
+
+        Stack<Integer> stack = new Stack<>();
+        stack.push(rootNode);
+
+        while (!stack.isEmpty()) {
+            int parent = stack.peek();
+            List<Integer> potentialChildren = new ArrayList<>(remainingVertices);
+            for (int child : potentialChildren) {
+                if (random.nextDouble() < 0.5) {
+                    adjacencyMatrix[parent][child] = 1;
+                    adjacencyMatrix[child][parent] = 1;
+                    stack.push(child);
+                    remainingVertices.remove(Integer.valueOf(child));
+                }
+            }
+            if (potentialChildren.isEmpty()) {
+                stack.pop();
+            }
+        }
+        return adjacencyMatrix;
     }
+
 }
