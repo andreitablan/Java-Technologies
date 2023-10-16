@@ -14,6 +14,6 @@
 
 ## Laboratory 2
 - **Compulsory:**
-	I finished part of the compulsory, only sending one parameter from one .jsp file to another. 
+	I finished part of the compulsory, in the *Lab2* project only sending one parameter from one .jsp file to another. 
 - **Homework**
-	In progress...
+  	I started the homework in the *Laboratory2Homework* project. I had the same problem as in the last laboratory, but now I solved it (it was something regarding the configuration of the project). Until now i only managed to include a servlet, upload a file and show some properties on *result.jsp*. 
