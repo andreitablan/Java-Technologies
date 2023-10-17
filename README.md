@@ -14,6 +14,10 @@
 
 ## Laboratory 2
 - **Compulsory:**
-	I finished part of the compulsory, in the *Lab2* project only sending one parameter from one .jsp file to another. 
+         I finished part of the compulsory, in the *Lab2* project only sending one parameter from one .jsp file to another. 
 - **Homework**
-  	I started the homework in the *Laboratory2Homework* project. I had the same problem as in the last laboratory, but now I solved it (it was something regarding the configuration of the project). Until now i only managed to include a servlet, upload a file and show some properties on *result.jsp*. 
+  	I started the homework in the *Laboratory2Homework* project. I had the same problem as in the last laboratory, but now I have solved it (it was something regarding the project's configuration). The only thing that I did not finish represents some properties of a graph.
+  	- The application is able to receive and parse a file in the specified format. It displays the *order* and *size* of a graph on the *result.jsp* page. The client can choose what to display.
+  	- The application is created on an object-oriented domain model, having classes such as Input and Output
+	- It also has a server-side component for the business-logic, called GraphService; a server-side component responsible with controlling the web-flow, Controller which is the servlet; a Graph class representing a graph, and two web filters, one for logging all requests received by *input.jsp* (example *[2023-10-17T15:18:46.765981+03:00] [GF 7.0.9] [INFO] [][com.laboratory2.laboratory2homework.filters.LogRequest] [tid: _ThreadID=41 _ThreadName=http-listener-1(5)] [levelValue: 800] [[
+  Received a request: 0:0:0:0:0:0:0:1 0:0:0:0:0:0:0:1]]*); and a filter for decorating the response. 
