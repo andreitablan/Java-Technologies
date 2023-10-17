@@ -10,15 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bb9f946-1a83-46d3-aeec-900246310af7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/model/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/model/Input.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/model/Output.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/service/GraphService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/filters/DecorateResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/filters/LogRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/GraphPropertiesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/model/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/model/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/model/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/model/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/model/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/model/Output.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/service/GraphService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/laboratory2/laboratory2homework/service/GraphService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/input.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/input.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/result.jsp" afterDir="false" />
     </list>
@@ -62,7 +62,8 @@
     "last_opened_file_path": "C:/GitHub/Java-Technologies/Laboratory2Homework/src/main/webapp",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">

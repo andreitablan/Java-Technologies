@@ -11,16 +11,13 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.Part;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.logging.Logger;
 
+/**
+ * Controller for the application.
+ */
 @WebServlet(name="controller", value="/controller")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2, // 2MB
         maxFileSize = 1024 * 1024 * 10, // 10MB
@@ -34,7 +31,6 @@ public class Controller extends HttpServlet {
             Input input = new Input();
             input.setGraphFile(request.getPart("graphFile"));
 
-            Part filePart = input.getGraphFile();
             String[] selectedProperties = request.getParameterValues("properties");
 
             GraphService graphService = new GraphService();
@@ -74,9 +70,8 @@ public class Controller extends HttpServlet {
             request.setAttribute("output", output);
             request.getRequestDispatcher("/result.jsp").forward(request, response);
         } catch (Exception e) {
-            logger.severe("An error occurred in GraphPropertiesServlet: " + e.getMessage());
+            logger.severe("An error occurred in Controller: " + e.getMessage());
             e.printStackTrace();
-            response.sendRedirect("/error.jsp");
         }
     }
 }

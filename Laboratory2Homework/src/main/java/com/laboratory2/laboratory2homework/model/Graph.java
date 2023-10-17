@@ -1,5 +1,8 @@
 package com.laboratory2.laboratory2homework.model;
 
+/**
+ * Defines a graph, with its properties.
+ */
 public class Graph {
     private int order;
     private int size;
@@ -10,6 +13,13 @@ public class Graph {
     private int diameter;
     private int radius;
     private int[][] adjacencyMatrix;
+
+    /**
+     * Creates a graph with the given properties.
+     * @param numberOfVertices The number of vertices in the graph.
+     * @param size The number of edges in the graph.
+     * @param adjacencyMatrix The adjacency matrix of the graph.
+     */
     public Graph(int numberOfVertices, int size, int[][] adjacencyMatrix) {
         this.order = numberOfVertices;
         this.size = size;

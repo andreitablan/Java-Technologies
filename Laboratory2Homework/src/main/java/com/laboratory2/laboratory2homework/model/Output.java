@@ -1,6 +1,8 @@
 package com.laboratory2.laboratory2homework.model;
 
-
+/**
+ * Defines the output of the program.
+ */
 public class Output {
     private int order;
     private int size;

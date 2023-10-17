@@ -9,7 +9,17 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Service for creating a graph from a file.
+ */
 public class GraphService {
+
+    /**
+     * Creates a graph from a file.
+     * @param fileContent The file content.
+     * @return The graph.
+     * @throws IOException If the file cannot be read.
+     */
     public Graph createGraph(InputStream fileContent) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(fileContent));
         int order = 0;

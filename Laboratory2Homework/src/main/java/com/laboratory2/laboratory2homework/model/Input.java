@@ -3,6 +3,9 @@ import jakarta.servlet.http.Part;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * Input model.
+ */
 public class Input {
     private Part graphFile;
 
