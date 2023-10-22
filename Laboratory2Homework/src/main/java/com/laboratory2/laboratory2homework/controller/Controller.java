@@ -1,7 +1,7 @@
 package com.laboratory2.laboratory2homework.controller;
 
 
-import com.laboratory2.laboratory2homework.model.Graph;
+import com.laboratory2.laboratory2homework.model.MyGraph;
 import com.laboratory2.laboratory2homework.model.Input;
 import com.laboratory2.laboratory2homework.model.Output;
 import com.laboratory2.laboratory2homework.service.GraphService;
@@ -35,34 +35,34 @@ public class Controller extends HttpServlet {
 
             GraphService graphService = new GraphService();
 
-            Graph graph = graphService.createGraph(input.getGraphFileInputStream());
+            MyGraph myGraph = graphService.createGraph(input.getGraphFileInputStream());
             Output output = new Output();
 
             if (selectedProperties != null) {
                 for (String property : selectedProperties) {
                     if ("order".equals(property)) {
-                        output.setOrder(graph.getOrder());
+                        output.setOrder(myGraph.getOrder());
                     }
                     if ("size".equals(property)) {
-                        output.setSize(graph.getSize());
+                        output.setSize(myGraph.getSize());
                     }
                     if ("connectedComponents".equals(property)) {
-                        output.setConnectedComponents(graph.getConnectedComponents());
+                        output.setConnectedComponents(myGraph.getConnectedComponents());
                     }
                     if ("minDegree".equals(property)) {
-                        output.setMinDegree(graph.getMinDegree());
+                        output.setMinDegree(myGraph.getMinDegree());
                     }
                     if ("maxDegree".equals(property)) {
-                        output.setMaxDegree(graph.getMaxDegree());
+                        output.setMaxDegree(myGraph.getMaxDegree());
                     }
                     if ("averageDegree".equals(property)) {
-                        output.setAverageDegree(graph.getAverageDegree());
+                        output.setAverageDegree(myGraph.getAverageDegree());
                     }
                     if ("diameter".equals(property)) {
-                        output.setDiameter(graph.getDiameter());
+                        output.setDiameter(myGraph.getDiameter());
                     }
                     if ("radius".equals(property)) {
-                        output.setRadius(graph.getRadius());
+                        output.setRadius(myGraph.getRadius());
                     }
                 }
             }

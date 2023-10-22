@@ -1,6 +1,6 @@
 package com.laboratory2.laboratory2homework.service;
 
-import com.laboratory2.laboratory2homework.model.Graph;
+import com.laboratory2.laboratory2homework.model.MyGraph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class GraphService {
      * @return The graph.
      * @throws IOException If the file cannot be read.
      */
-    public Graph createGraph(InputStream fileContent) throws IOException {
+    public MyGraph createGraph(InputStream fileContent) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(fileContent));
         int order = 0;
         int size = 0;
@@ -58,7 +58,7 @@ public class GraphService {
         }
 
         int[][] adjacencyMatrix = createAdjacencyMatrix(order, edges);
-        return new Graph(order, size, adjacencyMatrix);
+        return new MyGraph(order, size, adjacencyMatrix);
     }
 
     private int[][] createAdjacencyMatrix(int order, Map<Integer, Integer> edges) {
@@ -71,4 +71,5 @@ public class GraphService {
         }
         return adjacencyMatrix;
     }
+
 }

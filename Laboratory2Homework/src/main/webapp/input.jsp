@@ -5,7 +5,7 @@
 <body>
 <h2>Graph Properties:</h2>
 <form action="controller" method="post" enctype="multipart/form-data">
-    <label for="graphFile">Upload a graph (DIMACS format):</label>
+    <label for="graphFile">Upload a myGraph (DIMACS format):</label>
     <br>
     <input type="file" name="graphFile" id="graphFile">
     <br>

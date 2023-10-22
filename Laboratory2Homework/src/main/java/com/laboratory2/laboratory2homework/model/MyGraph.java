@@ -3,7 +3,7 @@ package com.laboratory2.laboratory2homework.model;
 /**
  * Defines a graph, with its properties.
  */
-public class Graph {
+public class MyGraph {
     private int order;
     private int size;
     private int connectedComponents;
@@ -20,7 +20,7 @@ public class Graph {
      * @param size The number of edges in the graph.
      * @param adjacencyMatrix The adjacency matrix of the graph.
      */
-    public Graph(int numberOfVertices, int size, int[][] adjacencyMatrix) {
+    public MyGraph(int numberOfVertices, int size, int[][] adjacencyMatrix) {
         this.order = numberOfVertices;
         this.size = size;
         this.adjacencyMatrix = adjacencyMatrix;
