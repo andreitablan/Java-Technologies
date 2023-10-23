@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>View Projects</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:dataTable var="project" value="#{projectBean.projects}">
+            <p:column headerText="Project ID">
+                <h:outputText value="#{project.id}"/>
+            </p:column>
+            <p:column headerText="Project Name">
+                <h:outputText value="#{project.name}"/>
+            </p:column>
+            <p:column headerText="Project Category">
+                <h:outputText value="#{project.category}"/>
+            </p:column>
+            <p:column headerText="Project Description">
+                <h:outputText value="#{project.description}"/>
+            </p:column>
+            <p:column headerText="Project Deadline">
+                <h:outputText value="#{project.deadline}"/>
+            </p:column>
+        </p:dataTable>
+    </h:form>
+</h:body>
+</html>

@@ -3,5 +3,18 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                                   http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
-  
+    <managed-bean>
+        <managed-bean-name>projectBean</managed-bean-name>
+        <managed-bean-class>com.example.lab3.ProjectBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>projectList</from-outcome>
+            <to-view-id>/projectList.viewProjects.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
 </faces-config>
