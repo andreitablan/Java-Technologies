@@ -3,10 +3,12 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
 <h:head>
-    <title>View Projects</title>
+    <title>Projects</title>
 </h:head>
 <h:body>
     <h:form>
+        <p:commandButton value="Back To Welcome Page" action="backToIndex" icon="pi pi-arrow-left" styleClass="p-button p-button-rounded" />
+
         <p:dataTable var="project" value="#{projectBean.projects}">
             <p:column headerText="Project ID">
                 <h:outputText value="#{project.id}"/>

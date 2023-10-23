@@ -1,4 +1,7 @@
-package com.example.lab3;
+package com.example.lab3.beans;
+import com.example.lab3.dao.ProjectDAO;
+import com.example.lab3.entities.Project;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import java.util.List;
