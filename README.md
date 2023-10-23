@@ -21,3 +21,9 @@
   	- The application is created on an object-oriented domain model, having classes such as Input and Output
 	- It also has a server-side component for the business-logic, called GraphService; a server-side component responsible with controlling the web-flow, Controller which is the servlet; a Graph class representing a graph, and two web filters, one for logging all requests received by *input.jsp* (example *[2023-10-17T15:18:46.765981+03:00] [GF 7.0.9] [INFO] [][com.laboratory2.laboratory2homework.filters.LogRequest] [tid: _ThreadID=41 _ThreadName=http-listener-1(5)] [levelValue: 800] [[
   Received a request: 0:0:0:0:0:0:0:1 0:0:0:0:0:0:0:1]]*); and a filter for decorating the response. 
+
+## Laboratory 3
+- **Compulsory:**
+         I started the compulsory in the *Lab3* project. I had to change to Wildfly in order to make it work. I created the JSF project and the PostgreSQL database with two tables.
+- **Homework**
+  	Work in progress
