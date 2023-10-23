@@ -24,6 +24,6 @@
 
 ## Laboratory 3
 - **Compulsory:**
-         I started the compulsory in the *Lab3* project. I had to change to Wildfly in order to make it work. I created the JSF project and the PostgreSQL database with two tables.
+        -I finished the compulsory in the *Lab3* project. I had to change to Wildfly in order to make it work. I created the JSF project and the PostgreSQL database with two tables and a web page for viewing the projects in the database.
 - **Homework**
   	Work in progress
