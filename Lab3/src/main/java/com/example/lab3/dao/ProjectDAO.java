@@ -34,5 +34,21 @@ public class ProjectDAO {
 
         return projects;
     }
+    public static void addProject(Project project) {
+        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+            connection.setAutoCommit(true); // Set auto-commit to true
+            String sql = "INSERT INTO projects (name, category, description, deadline) VALUES (?, ?, ?, ?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, project.getName());
+            statement.setString(2, project.getCategory());
+            statement.setString(3, project.getDescription());
+            statement.setDate(4, project.getDeadline());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
 
