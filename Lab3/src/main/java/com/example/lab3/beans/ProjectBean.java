@@ -3,8 +3,9 @@ package com.example.lab3.beans;
 import com.example.lab3.dao.ProjectDAO;
 import com.example.lab3.entities.Project;
 
-import javax.faces.bean.ManagedBean;
+import javax.annotation.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,15 +15,16 @@ import java.util.logging.Logger;
 
 @ManagedBean
 @RequestScoped
+@SessionScoped
 public class ProjectBean {
     private List<Project> projects;
     private String name;
     private String description;
     private String category;
     private Date deadline;
+    private Project selectedProject;
 
     public ProjectBean() {
-        // Initialize the list of projects from your database
         projects = ProjectDAO.getAllProjects();
     }
 
@@ -35,14 +37,13 @@ public class ProjectBean {
 
                 logger.log(Level.INFO, "Save Project called");
 
-                // Convert the java.util.Date to java.sql.Date
                 java.sql.Date sqlDate = new java.sql.Date(deadline.getTime());
 
                 logger.log(Level.INFO, "sqlDate: " + sqlDate);
 
-                // Now, sqlDate is ready for saving into your data store or database.
-                // Perform the save operation here.
                 Project newProject = new Project(15, name, category, description, sqlDate);
+                if(newProject !=null)
+                    System.out.println("project not null");
                 ProjectDAO.addProject(newProject);
 
                 logger.log(Level.INFO, "Project added to the database");
@@ -52,11 +53,18 @@ public class ProjectBean {
                 description = "";
                 category = "";
                 deadline = null;
-
         }
+    }
 
+    public void openEditDialog(Project project) {
+        selectedProject = project;
+    }
 
-
+    public void saveEditedProject() {
+        if (selectedProject != null) {
+            ProjectDAO.updateProject(selectedProject);
+            selectedProject = null;
+        }
     }
 
     public String getName() {
@@ -89,5 +97,13 @@ public class ProjectBean {
 
     public void setDeadline(Date deadline) {
         this.deadline = deadline;
+    }
+
+    public Project getSelectedProject() {
+        return selectedProject;
+    }
+
+    public void setSelectedProject(Project selectedProject) {
+        this.selectedProject = selectedProject;
     }
 }

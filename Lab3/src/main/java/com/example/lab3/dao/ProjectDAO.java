@@ -21,17 +21,17 @@ public class ProjectDAO {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
-                String description = resultSet.getString("description");
                 String category = resultSet.getString("category");
+                String description = resultSet.getString("description");
                 Date deadline = resultSet.getDate("deadline");
 
-                Project project = new Project(id, name, description, category, deadline);
+                Project project = new Project(id, name, category, description, deadline);
                 projects.add(project);
             }
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return projects;
     }
     public static void addProject(Project project) {
@@ -44,10 +44,28 @@ public class ProjectDAO {
             statement.setString(3, project.getDescription());
             statement.setDate(4, project.getDeadline());
             statement.executeUpdate();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
+    public static void updateProject(Project project) {
+        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+            String sql = "UPDATE projects SET name = ?, category = ?, description = ?, deadline = ? WHERE id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, project.getName());
+            statement.setString(2, project.getCategory());
+            statement.setString(3, project.getDescription());
+            statement.setDate(4, project.getDeadline());
+            statement.setInt(5, project.getId());
+            statement.executeUpdate();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 }

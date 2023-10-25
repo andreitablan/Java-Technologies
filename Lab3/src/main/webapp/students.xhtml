@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
     <title>Students</title>
 </h:head>
 <h:body>
-    <h:form>
+    <h:form id="studentsForm">
         <p:commandButton value="Back To Welcome Page" action="backToIndex" icon="pi pi-arrow-left" styleClass="p-button p-button-rounded" />
+        <p:commandButton value="Add Student" oncomplete="PF('studentDialog').show()" />
 
+        <p:dialog header="Add Student" widgetVar="studentDialog" modal="true" resizable="false">
+            <h:form id="studentForm">
+                <h:outputLabel for="studentName" value="Student Name:" />
+                <p:inputText id="studentName" value="#{studentBean.name}" />
+
+                <p:commandButton value="Save Student" action="#{studentBean.saveStudent}" oncomplete="PF('studentDialog').hide()" update="studentsForm" />
+            </h:form>
+        </p:dialog>
         <p:dataTable var="student" value="#{studentBean.students}">
             <p:column headerText="Student ID">
-                <h:outputText value="#{student.id}"/>
+                <h:outputText value="#{student.id}" />
             </p:column>
             <p:column headerText="Student Name">
-                <h:outputText value="#{student.name}"/>
+                <h:outputText value="#{student.name}" />
+            </p:column>
+            <p:column headerText="Projects">
+                <p:dataTable var="project" value="#{studentBean.getProjectsForStudent(student)}">
+                    <p:column headerText="Project Name">
+                        <h:outputText value="#{project.name}" />
+                    </p:column>
+                </p:dataTable>
             </p:column>
         </p:dataTable>
     </h:form>
+
 </h:body>
 </html>
