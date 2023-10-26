@@ -6,7 +6,7 @@ import com.example.lab3.dao.StudentProjectDAO;
 import com.example.lab3.entities.Project;
 import com.example.lab3.entities.Student;
 
-import javax.annotation.ManagedBean;
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import java.util.List;
 

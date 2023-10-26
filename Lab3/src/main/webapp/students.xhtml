@@ -5,19 +5,19 @@
 <h:head>
     <title>Students</title>
 </h:head>
-<h:body>
-    <h:form id="studentsForm">
+    <h:body>
+        <p:dialog header="Add Student" widgetVar="studentDialog" modal="true" resizable="false">
+        <h:form id="studentForm">
+            <h:outputLabel for="studentName" value="Student Name:" />
+            <p:inputText id="studentName" value="#{studentBean.name}" />
+
+            <p:commandButton value="Save Student" action="#{studentBean.saveStudent}" oncomplete="PF('studentDialog').hide()" />
+        </h:form>
+    </p:dialog>
         <p:commandButton value="Back To Welcome Page" action="backToIndex" icon="pi pi-arrow-left" styleClass="p-button p-button-rounded" />
         <p:commandButton value="Add Student" oncomplete="PF('studentDialog').show()" />
 
-        <p:dialog header="Add Student" widgetVar="studentDialog" modal="true" resizable="false">
-            <h:form id="studentForm">
-                <h:outputLabel for="studentName" value="Student Name:" />
-                <p:inputText id="studentName" value="#{studentBean.name}" />
 
-                <p:commandButton value="Save Student" action="#{studentBean.saveStudent}" oncomplete="PF('studentDialog').hide()" update="studentsForm" />
-            </h:form>
-        </p:dialog>
         <p:dataTable var="student" value="#{studentBean.students}">
             <p:column headerText="Student ID">
                 <h:outputText value="#{student.id}" />
@@ -33,7 +33,6 @@
                 </p:dataTable>
             </p:column>
         </p:dataTable>
-    </h:form>
 
 </h:body>
 </html>

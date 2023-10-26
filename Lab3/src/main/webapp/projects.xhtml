@@ -6,35 +6,60 @@
     <title>Projects</title>
 </h:head>
 <h:body>
+    <p:dialog header="Edit Project" widgetVar="editProjectDialog" modal="true" resizable="false">
+        <h:form>
+            <p:panelGrid columns="2">
+                <h:outputLabel for="editName" value="Name:" />
+                <p:inputText id="editName" value="#{projectBean.selectedProject.name}" />
+
+                <h:outputLabel for="editCategory" value="Category:" />
+                <p:selectOneMenu id="editCategory" value="#{projectBean.selectedProject.category}">
+                    <f:selectItem itemLabel="Select Category" itemValue="" />
+                    <f:selectItem itemLabel="Easy" itemValue="Easy" />
+                    <f:selectItem itemLabel="Medium" itemValue="Medium" />
+                    <f:selectItem itemLabel="Hard" itemValue="Hard" />
+                </p:selectOneMenu>
+
+                <h:outputLabel for="editDescription" value="Description:" />
+                <p:inputText id="editDescription" value="#{projectBean.selectedProject.description}" />
+
+                <h:outputLabel for="editDeadline" value="Deadline:" />
+                <p:calendar id="editDeadline" value="#{projectBean.selectedProject.deadline}" showOn="button" />
+
+                <p:commandButton value="Save" actionListener="#{projectBean.saveEditedProject}" oncomplete="PF('editProjectDialog').hide()" />
+            </p:panelGrid>
+        </h:form>
+    </p:dialog>
+    <p:dialog header="Create/Edit Project" widgetVar="projectDialog" modal="true" resizable="false">
+    <!-- Form for creating/editing a project -->
+    <h:form >
+        <p:panelGrid columns="2">
+            <h:outputLabel for="name" value="Name:" />
+            <p:inputText id="name" value="#{projectBean.name}" />
+
+            <h:outputLabel for="category" value="Category:" />
+            <p:selectOneMenu id="category" value="#{projectBean.category}">
+                <f:selectItem itemLabel="Select Category" itemValue="" />
+                <f:selectItem itemLabel="Easy" itemValue="Easy" />
+                <f:selectItem itemLabel="Medium" itemValue="Medium" />
+                <f:selectItem itemLabel="Hard" itemValue="Hard" />
+            </p:selectOneMenu>
+
+            <h:outputLabel for="description" value="description:" />
+            <p:inputText id="description" value="#{projectBean.description}" />
+
+            <h:outputLabel for="deadline" value="Deadline:" />
+            <p:calendar id="deadline" value="#{projectBean.deadline}" showOn="button" />
+
+            <p:commandButton value="Save" action="#{projectBean.saveProject}" update="form" oncomplete="PF('projectDialog').hide()" />
+        </p:panelGrid>
+    </h:form>
+</p:dialog>
     <h:form id="form">
         <p:commandButton value="Back To Welcome Page" action="backToIndex" icon="pi pi-arrow-left" styleClass="p-button p-button-rounded" />
         <p:commandButton value="Add Project" oncomplete="PF('projectDialog').show()" />
 
-        <p:dialog header="Create/Edit Project" widgetVar="projectDialog" modal="true" resizable="false">
-            <!-- Form for creating/editing a project -->
-            <h:form >
-                <p:panelGrid columns="2">
-                    <h:outputLabel for="name" value="Name:" />
-                    <p:inputText id="name" value="#{projectBean.name}" />
 
-                    <h:outputLabel for="category" value="Category:" />
-                    <p:selectOneMenu id="category" value="#{projectBean.category}">
-                        <f:selectItem itemLabel="Select Category" itemValue="" />
-                        <f:selectItem itemLabel="Easy" itemValue="Easy" />
-                        <f:selectItem itemLabel="Medium" itemValue="Medium" />
-                        <f:selectItem itemLabel="Hard" itemValue="Hard" />
-                    </p:selectOneMenu>
-
-                    <h:outputLabel for="description" value="description:" />
-                    <p:inputText id="description" value="#{projectBean.description}" />
-
-                    <h:outputLabel for="deadline" value="Deadline:" />
-                    <p:calendar id="deadline" value="#{projectBean.deadline}" showOn="button" />
-
-                    <p:commandButton value="Save" action="#{projectBean.saveProject}" update="form" oncomplete="PF('projectDialog').hide()" />
-                </p:panelGrid>
-            </h:form>
-        </p:dialog>
 
         <p:dataTable var="project" value="#{projectBean.projects}">
             <p:column headerText="Project ID">
@@ -56,30 +81,7 @@
                 <p:commandButton value="Edit" actionListener="#{projectBean.openEditDialog(project)}" oncomplete="PF('editProjectDialog').show()" />
             </p:column>
         </p:dataTable>
-        <p:dialog header="Edit Project" widgetVar="editProjectDialog" modal="true" resizable="false">
-            <h:form>
-                <p:panelGrid columns="2">
-                    <h:outputLabel for="editName" value="Name:" />
-                    <p:inputText id="editName" value="#{projectBean.selectedProject.name}" />
 
-                    <h:outputLabel for="editCategory" value="Category:" />
-                    <p:selectOneMenu id="editCategory" value="#{projectBean.selectedProject.category}">
-                        <f:selectItem itemLabel="Select Category" itemValue="" />
-                        <f:selectItem itemLabel="Easy" itemValue="Easy" />
-                        <f:selectItem itemLabel="Medium" itemValue="Medium" />
-                        <f:selectItem itemLabel="Hard" itemValue="Hard" />
-                    </p:selectOneMenu>
-
-                    <h:outputLabel for="editDescription" value="Description:" />
-                    <p:inputText id="editDescription" value="#{projectBean.selectedProject.description}" />
-
-                    <h:outputLabel for="editDeadline" value="Deadline:" />
-                    <p:calendar id="editDeadline" value="#{projectBean.selectedProject.deadline}" showOn="button" />
-
-                    <p:commandButton value="Save" actionListener="#{projectBean.saveEditedProject}" oncomplete="PF('editProjectDialog').hide()" />
-                </p:panelGrid>
-            </h:form>
-        </p:dialog>
     </h:form>
 </h:body>
 </html>

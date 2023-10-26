@@ -10,11 +10,12 @@ import org.primefaces.model.DualListModel;
 import javax.faces.annotation.ManagedProperty;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ViewScoped;
 import java.util.ArrayList;
 import java.util.List;
 
 @ManagedBean
-@RequestScoped
+@ViewScoped
 public class StudentBean {
     private ProjectBean projectBean;
     private String name = ""; // Initialize with an empty string
@@ -41,6 +42,7 @@ public class StudentBean {
     }
 
     public void saveStudent() {
+        System.out.println("saveStudent " + name);
         Student insertedStudent = StudentDAO.insertStudent(name);
 
         // Update the list of students
