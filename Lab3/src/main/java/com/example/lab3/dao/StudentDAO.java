@@ -1,4 +1,5 @@
 package com.example.lab3.dao;
+import com.example.lab3.entities.Project;
 import com.example.lab3.entities.Student;
 
 import java.sql.*;
@@ -56,6 +57,19 @@ public class StudentDAO {
         }
 
         return student;
+    }
+
+    public static void updateStudent(Student student) {
+        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+            String sql = "UPDATE students SET name = ? WHERE id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, student.getName());
+            statement.setInt(2, student.getId());
+            statement.executeUpdate();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 }

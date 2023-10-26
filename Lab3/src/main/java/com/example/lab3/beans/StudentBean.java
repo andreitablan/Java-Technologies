@@ -53,7 +53,7 @@ public class StudentBean {
     public void openEditDialog(Student student) {
         selectedStudent = student;
     }
-/*
+
     public void saveEditedStudent() {
         if (selectedStudent != null) {
             // Call the DAO method to update the student in the database
@@ -61,7 +61,7 @@ public class StudentBean {
             selectedStudent = null; // Clear the selected student
         }
     }
-*/
+
     public String getName() {
         return name;
     }

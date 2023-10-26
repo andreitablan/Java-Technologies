@@ -14,6 +14,17 @@
             <p:commandButton value="Save Student" action="#{studentBean.saveStudent}" oncomplete="PF('studentDialog').hide()" update="form"/>
         </h:form>
     </p:dialog>
+        <p:dialog header="Edit Student" widgetVar="editStudentDialog" modal="true" resizable="false">
+            <h:form id="editStudentForm">
+                <!-- Add input fields for editing student information, e.g., name, etc. -->
+                <h:outputLabel for="editStudentName" value="Student Name:" />
+                <p:inputText id="editStudentName" value="#{studentBean.selectedStudent.name}" />
+
+                <!-- Add a "Save" button for saving the edited student -->
+                <p:commandButton value="Save" actionListener="#{studentBean.saveEditedStudent}" update="form" oncomplete="PF('editStudentDialog').hide()" />
+            </h:form>
+        </p:dialog>
+
         <p:commandButton value="Back To Welcome Page" action="backToIndex" icon="pi pi-arrow-left" styleClass="p-button p-button-rounded" />
         <p:commandButton value="Add Student" oncomplete="PF('studentDialog').show()" />
 
@@ -25,13 +36,17 @@
             <p:column headerText="Student Name">
                 <h:outputText value="#{student.name}" />
             </p:column>
-            <p:column headerText="Projects">
+            <p:column headerText="Edit Name">
+                <p:commandButton value="Edit" actionListener="#{studentBean.openEditDialog(student)}" oncomplete="PF('editStudentDialog').show()" />
+            </p:column>
+            <p:column headerText="Projects Name">
                 <p:dataTable var="project" value="#{studentBean.getProjectsForStudent(student)}">
-                    <p:column headerText="Project Name">
+                    <p:column headerText="#{studentBean.getProjectsForStudent(student).size()}">
                         <h:outputText value="#{project.name}" />
                     </p:column>
                 </p:dataTable>
             </p:column>
+
         </p:dataTable>
         </h:form>
 </h:body>
