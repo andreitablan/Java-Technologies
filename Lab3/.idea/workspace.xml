@@ -9,7 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18f947e2-7518-4998-b843-0cd832c97bc6" name="Changes" comment="" />
+    <list default="true" id="18f947e2-7518-4998-b843-0cd832c97bc6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/infrastructure/ResourceInjectionExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/projects.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/projects.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/students.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/students.xhtml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="jsf" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -240,6 +245,7 @@
       <workItem from="1698248911538" duration="16733000" />
       <workItem from="1698309440679" duration="5447000" />
       <workItem from="1698317472755" duration="13331000" />
+      <workItem from="1698341495519" duration="1540000" />
     </task>
     <servers />
   </component>
