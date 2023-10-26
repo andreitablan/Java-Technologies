@@ -9,17 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18f947e2-7518-4998-b843-0cd832c97bc6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/ProjectBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/ProjectBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/StudentBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/StudentBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/ProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/ProjectDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/StudentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/StudentProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/StudentProjectDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entities/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entities/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/projects.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/projects.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/students.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/students.xhtml" afterDir="false" />
-    </list>
+    <list default="true" id="18f947e2-7518-4998-b843-0cd832c97bc6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -249,7 +239,7 @@
       <workItem from="1698248315899" duration="490000" />
       <workItem from="1698248911538" duration="16733000" />
       <workItem from="1698309440679" duration="5447000" />
-      <workItem from="1698317472755" duration="13284000" />
+      <workItem from="1698317472755" duration="13331000" />
     </task>
     <servers />
   </component>
