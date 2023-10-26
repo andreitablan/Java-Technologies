@@ -7,7 +7,7 @@
 </h:head>
 <h:body>
     <p:dialog header="Edit Project" widgetVar="editProjectDialog" modal="true" resizable="false">
-        <h:form>
+        <h:form id="editForm">
             <p:panelGrid columns="2">
                 <h:outputLabel for="editName" value="Name:" />
                 <p:inputText id="editName" value="#{projectBean.selectedProject.name}" />
@@ -24,9 +24,9 @@
                 <p:inputText id="editDescription" value="#{projectBean.selectedProject.description}" />
 
                 <h:outputLabel for="editDeadline" value="Deadline:" />
-                <p:calendar id="editDeadline" value="#{projectBean.selectedProject.deadline}" showOn="button" />
+                <p:calendar id="editDeadline" value="#{projectBean.deadline}" showOn="button" />
 
-                <p:commandButton value="Save" actionListener="#{projectBean.saveEditedProject}" oncomplete="PF('editProjectDialog').hide()" />
+                <p:commandButton value="Save" actionListener="#{projectBean.saveEditedProject}" update="editForm"  oncomplete="PF('editProjectDialog').hide()" />
             </p:panelGrid>
         </h:form>
     </p:dialog>

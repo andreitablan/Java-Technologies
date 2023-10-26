@@ -11,13 +11,13 @@
             <h:outputLabel for="studentName" value="Student Name:" />
             <p:inputText id="studentName" value="#{studentBean.name}" />
 
-            <p:commandButton value="Save Student" action="#{studentBean.saveStudent}" oncomplete="PF('studentDialog').hide()" />
+            <p:commandButton value="Save Student" action="#{studentBean.saveStudent}" oncomplete="PF('studentDialog').hide()" update="form"/>
         </h:form>
     </p:dialog>
         <p:commandButton value="Back To Welcome Page" action="backToIndex" icon="pi pi-arrow-left" styleClass="p-button p-button-rounded" />
         <p:commandButton value="Add Student" oncomplete="PF('studentDialog').show()" />
 
-
+        <h:form id="form">
         <p:dataTable var="student" value="#{studentBean.students}">
             <p:column headerText="Student ID">
                 <h:outputText value="#{student.id}" />
@@ -33,6 +33,6 @@
                 </p:dataTable>
             </p:column>
         </p:dataTable>
-
+        </h:form>
 </h:body>
 </html>

@@ -61,7 +61,8 @@ public class ProjectBean {
     }
 
     public void saveEditedProject() {
-        if (selectedProject != null) {
+        if (selectedProject != null && deadline != null) {
+            selectedProject.setDeadline(new java.sql.Date(deadline.getTime()));
             ProjectDAO.updateProject(selectedProject);
             selectedProject = null;
         }
