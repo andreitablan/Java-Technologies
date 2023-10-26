@@ -2,89 +2,90 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+<f:view  locale="#{localeBean.currentLocale}">
 <h:head>
-    <title>Projects</title>
+    <title>#{msgs.projectsTitle}</title>
 </h:head>
 <h:body>
-    <p:dialog header="Edit Project" widgetVar="editProjectDialog" modal="true" resizable="false">
+    <p:dialog header="#{msgs.editProject}" widgetVar="editProjectDialog" modal="true" resizable="false">
         <h:form id="editForm">
             <p:panelGrid columns="2">
-                <h:outputLabel for="editName" value="Name:" />
+                <h:outputLabel for="editName" value="#{msgs.projectName}" />
                 <p:inputText id="editName" value="#{projectBean.selectedProject.name}" />
 
-                <h:outputLabel for="editCategory" value="Category:" />
+                <h:outputLabel for="editCategory" value="#{msgs.projectCategory}" />
                 <p:selectOneMenu id="editCategory" value="#{projectBean.selectedProject.category}">
-                    <f:selectItem itemLabel="Select Category" itemValue="" />
-                    <f:selectItem itemLabel="Easy" itemValue="Easy" />
-                    <f:selectItem itemLabel="Medium" itemValue="Medium" />
-                    <f:selectItem itemLabel="Hard" itemValue="Hard" />
+                    <f:selectItem itemLabel="#{msgs.selectCategory}" itemValue="" />
+                    <f:selectItem itemLabel="#{msgs.easy}" itemValue="Easy" />
+                    <f:selectItem itemLabel="#{msgs.medium}" itemValue="Medium" />
+                    <f:selectItem itemLabel="#{msgs.hard}" itemValue="Hard" />
                 </p:selectOneMenu>
 
-                <h:outputLabel for="editDescription" value="Description:" />
+                <h:outputLabel for="editDescription" value="#{msgs.projectDescription}" />
                 <p:inputText id="editDescription" value="#{projectBean.selectedProject.description}" />
 
-                <h:outputLabel for="editDeadline" value="Deadline:" />
+                <h:outputLabel for="editDeadline" value="#{msgs.projectDeadline}" />
                 <p:calendar id="editDeadline" value="#{projectBean.deadline}" showOn="button" />
 
-                <p:commandButton value="Save" actionListener="#{projectBean.saveEditedProject}" update="editForm"  oncomplete="PF('editProjectDialog').hide()" />
+                <p:commandButton value="#{msgs.save}" actionListener="#{projectBean.saveEditedProject}" update="editForm"  oncomplete="PF('editProjectDialog').hide()" />
             </p:panelGrid>
         </h:form>
     </p:dialog>
-    <p:dialog header="Create/Edit Project" widgetVar="projectDialog" modal="true" resizable="false">
-    <!-- Form for creating/editing a project -->
+    <p:dialog header="#{msgs.addProjectButton}" widgetVar="projectDialog" modal="true" resizable="false">
     <h:form >
         <p:panelGrid columns="2">
-            <h:outputLabel for="name" value="Name:" />
+            <h:outputLabel for="name" value="#{msgs.projectName}"/>
             <p:inputText id="name" value="#{projectBean.name}" />
 
-            <h:outputLabel for="category" value="Category:" />
+            <h:outputLabel for="category" value="#{msgs.projectCategory}" />
             <p:selectOneMenu id="category" value="#{projectBean.category}">
-                <f:selectItem itemLabel="Select Category" itemValue="" />
-                <f:selectItem itemLabel="Easy" itemValue="Easy" />
-                <f:selectItem itemLabel="Medium" itemValue="Medium" />
-                <f:selectItem itemLabel="Hard" itemValue="Hard" />
+                <f:selectItem itemLabel="#{msgs.selectCategory}" itemValue="" />
+                <f:selectItem itemLabel="#{msgs.easy}" itemValue="Easy" />
+                <f:selectItem itemLabel="#{msgs.medium}" itemValue="Medium" />
+                <f:selectItem itemLabel="#{msgs.hard}" itemValue="Hard" />
             </p:selectOneMenu>
 
-            <h:outputLabel for="description" value="description:" />
+            <h:outputLabel for="description" value="#{msgs.projectDescription}" />
             <p:inputText id="description" value="#{projectBean.description}" />
 
-            <h:outputLabel for="deadline" value="Deadline:" />
+            <h:outputLabel for="deadline" value="#{msgs.projectDeadline}" />
             <p:calendar id="deadline" value="#{projectBean.deadline}" showOn="button" />
 
-            <p:commandButton value="Save" action="#{projectBean.saveProject}" update="form" oncomplete="PF('projectDialog').hide()" />
+            <p:commandButton value="#{msgs.save}" action="#{projectBean.saveProject}" update="form" oncomplete="PF('projectDialog').hide()" />
         </p:panelGrid>
     </h:form>
 </p:dialog>
     <h:form id="form">
-        <p:commandButton value="Back To Welcome Page" action="backToIndex" icon="pi pi-arrow-left" styleClass="p-button p-button-rounded"  style="margin-right: 10px;"/>
-        <p:commandButton value="Add Project" oncomplete="PF('projectDialog').show()"  style="margin-right: 10px;"/>
+        <p:commandButton value="#{msgs.backToWelcomePageButton}" action="backToIndex" icon="pi pi-arrow-left" styleClass="p-button p-button-rounded"  style="margin-right: 10px;"/>
+        <p:commandButton value="#{msgs.addProjectButton}" oncomplete="PF('projectDialog').show()"  style="margin-right: 10px;"/>
 
 
 
         <p:dataTable var="project" value="#{projectBean.projects}">
-            <p:column headerText="Project ID">
+            <p:column headerText="#{msgs.projectID}">
                 <h:outputText value="#{project.id}"/>
             </p:column>
-            <p:column headerText="Project Name">
+            <p:column headerText="#{msgs.projectName}">
                 <h:outputText value="#{project.name}"/>
             </p:column>
-            <p:column headerText="Project Category">
+            <p:column headerText="#{msgs.projectCategory}">
                 <h:outputText value="#{project.category}"/>
             </p:column>
-            <p:column headerText="Project Description">
+            <p:column headerText="#{msgs.projectDescription}">
                 <h:outputText value="#{project.description}"/>
             </p:column>
-            <p:column headerText="Project Deadline">
+            <p:column headerText="#{msgs.projectDeadline}">
                 <h:outputText value="#{project.deadline}"/>
             </p:column>
-            <p:column headerText="Edit project">
-                <p:commandButton value="Edit" actionListener="#{projectBean.openEditDialog(project)}" oncomplete="PF('editProjectDialog').show()" />
+            <p:column headerText="#{msgs.editProject}">
+                <p:commandButton value="#{msgs.editProjectButton}" actionListener="#{projectBean.openEditDialog(project)}" oncomplete="PF('editProjectDialog').show()" update="form" />
             </p:column>
-            <p:column headerText="Delete project">
-                <p:commandButton value="Delete" actionListener="#{projectBean.deleteProject(project)}" update="form" />
+            <p:column headerText="#{msgs.deleteProject}">
+                <p:commandButton value="#{msgs.deleteProjectButton}" actionListener="#{projectBean.deleteProject(project)}" update="form" />
             </p:column>
         </p:dataTable>
 
     </h:form>
 </h:body>
+</f:view>
 </html>

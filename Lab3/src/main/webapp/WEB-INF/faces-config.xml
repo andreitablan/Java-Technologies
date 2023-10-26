@@ -15,6 +15,12 @@
         <managed-bean-scope>view</managed-bean-scope>
     </managed-bean>
 
+    <managed-bean>
+        <managed-bean-name>localeBean</managed-bean-name>
+        <managed-bean-class>com.example.lab3.beans.LocaleBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
     <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
@@ -46,5 +52,17 @@
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+    <application>
+        <resource-bundle>
+            <base-name>messages</base-name>
+            <var>msgs</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>messages_ro</base-name>
+            <var>msgs_ro</var>
+        </resource-bundle>
+    </application>
+
 
 </faces-config>

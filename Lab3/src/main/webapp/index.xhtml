@@ -6,17 +6,24 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-<f:view>
+<f:view  locale="#{localeBean.currentLocale}">
     <h:head>
-        <title>Students and Projects</title>
+        <title>#{msgs.studentsAndProjects}</title>
     </h:head>
     <h:body>
-        <h:form>
-            <h1>Welcome to the JSF Application</h1>
-            <p>Click a button to navigate:</p>
-            <p:commandButton value="View Projects" action="projects" icon="pi pi-list" styleClass="p-button p-button-rounded"  style="margin-right: 10px;"/>
 
-            <p:commandButton value="View Students" action="students" icon="pi pi-users" styleClass="p-button p-button-rounded"  style="margin-right: 10px;"/>
+        <h:form>
+            <h:commandButton value="#{msgs.englishButton}" action="#{localeBean.changeLocale('en')}"  styleClass="p-button p-button-rounded"  style="margin-right: 10px;"/>
+            <h:commandButton value="#{msgs.romanianButton}" action="#{localeBean.changeLocale('ro')}"  styleClass="p-button p-button-rounded"  style="margin-right: 10px;"/>
+        </h:form>
+            <h:outputText value="#{msgs.greeting}" />
+        <h:form>
+            <p><f:view locale="#{localeBean.currentLocale}">
+                <h:outputText value="#{msgs.indexHtml}" />
+            </f:view></p>
+            <p:commandButton value="#{msgs.viewProjectsButton}" action="projects" icon="pi pi-list" styleClass="p-button p-button-rounded"  style="margin-right: 10px;"/>
+
+            <p:commandButton value="#{msgs.viewStudentsButton}" action="students" icon="pi pi-users" styleClass="p-button p-button-rounded"  style="margin-right: 10px;"/>
         </h:form>
     </h:body>
 </f:view>

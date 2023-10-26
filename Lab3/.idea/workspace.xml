@@ -10,8 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18f947e2-7518-4998-b843-0cd832c97bc6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/infrastructure/ResourceInjectionExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/LocaleBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages_ro.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/projects.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/projects.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/students.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/students.xhtml" afterDir="false" />
     </list>
@@ -245,7 +250,7 @@
       <workItem from="1698248911538" duration="16733000" />
       <workItem from="1698309440679" duration="5447000" />
       <workItem from="1698317472755" duration="13331000" />
-      <workItem from="1698341495519" duration="1540000" />
+      <workItem from="1698341495519" duration="6949000" />
     </task>
     <servers />
   </component>

@@ -2,69 +2,70 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+<f:view  locale="#{localeBean.currentLocale}">
 <h:head>
     <title>Students</title>
 </h:head>
     <h:body>
-        <p:dialog header="Add Student" widgetVar="studentDialog" modal="true" resizable="false">
+        <p:dialog header="#{msgs.addStudentButton}" widgetVar="studentDialog" modal="true" resizable="false">
         <h:form id="studentForm">
-            <h:outputLabel for="studentName" value="Student Name:" />
+            <h:outputLabel for="studentName" value="#{msgs.studentName}" />
             <p:inputText id="studentName" value="#{studentBean.name}" />
             <div class="card">
                 <h5 style="margin-top: 0">Project Lists</h5>
                 <p:pickList id="pickProjects" value="#{studentBean.projectsDualList}" var="projectsDualList" itemValue="#{projectsDualList}" itemLabel="#{projectsDualList}" />
             </div>
-            <p:commandButton value="Save Student" action="#{studentBean.saveStudent}" oncomplete="PF('studentDialog').hide()" update="form"/>
+            <p:commandButton value="#{msgs.save}" action="#{studentBean.saveStudent}" oncomplete="PF('studentDialog').hide()" update="form"/>
         </h:form>
     </p:dialog>
-        <p:dialog header="Edit Student" widgetVar="editStudentDialog" modal="true" resizable="false">
+        <p:dialog header="#{msgs.editStudent}" widgetVar="editStudentDialog" modal="true" resizable="false">
             <h:form id="editStudentForm">
-                <!-- Add input fields for editing student information, e.g., name, etc. -->
-                <h:outputLabel for="editStudentName" value="Student Name:" />
+                <h:outputLabel for="editStudentName" value="#{msgs.studentName}" />
                 <p:inputText id="editStudentName" value="#{studentBean.selectedStudent.name}" />
 
-                <p:commandButton value="Save" actionListener="#{studentBean.saveEditedStudent}" update="form" oncomplete="PF('editStudentDialog').hide()" />
+                <p:commandButton value="#{msgs.save}" actionListener="#{studentBean.saveEditedStudent}" update="form" oncomplete="PF('editStudentDialog').hide()" />
             </h:form>
         </p:dialog>
 
-        <p:dialog header="Edit Projects" widgetVar="editStudentProjectsDialog" modal="true" resizable="false">
+        <p:dialog header="#{msgs.editProjects}" widgetVar="editStudentProjectsDialog" modal="true" resizable="false">
             <h:form id="editStudentProjectsForm">
                 <div class="card">
                     <h5 style="margin-top: 0">Project Lists</h5>
                     <p:pickList id="pickList" value="#{studentBean.projectsDualList}" var="projectsDualList" itemValue="#{projectsDualList}" itemLabel="#{projectsDualList}" />
                 </div>
-                <p:commandButton value="Save" actionListener="#{studentBean.saveEditedStudentProjects}" update="form" oncomplete="PF('editStudentProjectsDialog').hide()" />
+                <p:commandButton value="#{msgs.save}" actionListener="#{studentBean.saveEditedStudentProjects}" update="form" oncomplete="PF('editStudentProjectsDialog').hide()" />
             </h:form>
         </p:dialog>
 
-        <p:commandButton value="Back To Welcome Page" action="backToIndex" icon="pi pi-arrow-left" styleClass="p-button p-button-rounded"  style="margin-right: 10px;"/>
-        <p:commandButton value="Add Student" oncomplete="PF('studentDialog').show()"  style="margin-right: 10px;"/>
+        <p:commandButton value="#{msgs.backToWelcomePageButton}" action="backToIndex" icon="pi pi-arrow-left" styleClass="p-button p-button-rounded"  style="margin-right: 10px;"/>
+        <p:commandButton value="#{msgs.addStudentButton}" oncomplete="PF('studentDialog').show()"  style="margin-right: 10px;"/>
 
         <h:form id="form">
         <p:dataTable var="student" value="#{studentBean.students}">
-            <p:column headerText="Student ID">
+            <p:column headerText="#{msgs.studentID}">
                 <h:outputText value="#{student.id}" />
             </p:column>
-            <p:column headerText="Student Name">
+            <p:column headerText="#{msgs.studentName}">
                 <h:outputText value="#{student.name}" />
             </p:column>
-            <p:column headerText="Edit Name">
-                <p:commandButton value="Edit" actionListener="#{studentBean.openEditDialog(student)}" oncomplete="PF('editStudentDialog').show()" />
+            <p:column headerText="#{msgs.editName}">
+                <p:commandButton value="#{msgs.editStudentButton}" actionListener="#{studentBean.openEditDialog(student)}" oncomplete="PF('editStudentDialog').show()" />
             </p:column>
-            <p:column headerText="Projects Name">
+            <p:column headerText="#{msgs.projectsNames}">
                 <p:dataTable var="project" value="#{studentBean.getProjectsForStudent(student)}">
                     <p:column headerText="#{studentBean.getProjectsForStudent(student).size()}">
                         <h:outputText value="#{project.name}" />
                     </p:column>
                 </p:dataTable>
             </p:column>
-            <p:column headerText="Edit Projects">
-                <p:commandButton value="EditProjects" actionListener="#{studentBean.openEditProjectsDialog(student)}" oncomplete="PF('editStudentProjectsDialog').show()" />
+            <p:column headerText="#{msgs.editProjects}">
+                <p:commandButton value="#{msgs.editProjectsButton}" actionListener="#{studentBean.openEditProjectsDialog(student)}" oncomplete="PF('editStudentProjectsDialog').show()" />
             </p:column>
-            <p:column headerText="Delete Student">
-                <p:commandButton value="Delete" actionListener="#{studentBean.deleteStudent(student)}" update="form"/>
+            <p:column headerText="#{msgs.deleteStudent}">
+                <p:commandButton value="#{msgs.deleteStudentButton}" actionListener="#{studentBean.deleteStudent(student)}" update="form"/>
             </p:column>
         </p:dataTable>
         </h:form>
 </h:body>
+</f:view>
 </html>
