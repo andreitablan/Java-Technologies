@@ -32,3 +32,11 @@
   	- Use appropriate components for specifying the deadline of a project (for example, DatePicker), the category (for example, SelectOneMenu) and the list of projects of a student (for example, PickList).
   	- Define the web-flow using navigation-rules.
   	- *NOT DONE YET* Internationalize the user interface and offer support for at least two locales.
+
+## Laboratory 4
+- **Compulsory:**
+ 	- Configure a connection pool and a JDBC resource using an administrative tool. I used Wildfly.
+   	- Create DatSource objects using either JNDI directly or resource injection. I created a ResourceInjection Class.
+- **Homework**
+	- Work in progress...
+
