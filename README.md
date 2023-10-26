@@ -26,12 +26,12 @@
 - **Compulsory:**
         - I finished the compulsory in the *Lab3* project. I had to change to Wildfly in order to make it work. I created the JSF project and the PostgreSQL database with two tables and a web page for viewing the projects in the database.
 - **Homework**
-	- I finished almost the entire homework, except the internationalization at this moment.
+	- I finished the entire homework.
   	- Create the support for managing the projects and the students, using a datatable.
   	- Define pages for creating a new project/student or editing an existing one, using a modal dialog.(+delete one)
   	- Use appropriate components for specifying the deadline of a project (for example, DatePicker), the category (for example, SelectOneMenu) and the list of projects of a student (for example, PickList).
   	- Define the web-flow using navigation-rules.
-  	- *NOT DONE YET* Internationalize the user interface and offer support for at least two locales.
+  	- Internationalize the user interface and offer support for at least two locales. (I used English and Romanian)
 
 ## Laboratory 4
 - **Compulsory:**
