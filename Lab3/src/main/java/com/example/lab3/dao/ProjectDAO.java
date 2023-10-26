@@ -65,6 +65,24 @@ public class ProjectDAO {
             e.printStackTrace();
         }
     }
+    public static void deleteProject(Project project) {
+        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+            String deleteStudentProjectsSql = "DELETE FROM student_projects WHERE project_id = ?";
+            PreparedStatement deleteStudentProjectsStatement = connection.prepareStatement(deleteStudentProjectsSql);
+            deleteStudentProjectsStatement.setInt(1, project.getId());
+            deleteStudentProjectsStatement.executeUpdate();
+
+            String deleteProjectSql = "DELETE FROM projects WHERE id = ?";
+            PreparedStatement deleteProjectStatement = connection.prepareStatement(deleteProjectSql);
+            deleteProjectStatement.setInt(1, project.getId());
+            deleteProjectStatement.executeUpdate();
+
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 

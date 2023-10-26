@@ -40,21 +40,28 @@ public class StudentProjectDAO {
 
         return projects;
     }
+    public static void updateStudentProjects(Student student, List<Project> projects) {
+        for(Project project : projects)
+            System.out.println(project.getName());
+        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+            String deleteSql = "DELETE FROM student_projects WHERE student_id = ?";
+            PreparedStatement deleteStatement = connection.prepareStatement(deleteSql);
+            deleteStatement.setInt(1, student.getId());
+            deleteStatement.executeUpdate();
 
-        public static void insertStudentProject(Student student, Project project) {
-            try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
-                String sql = "INSERT INTO student_projects (student_id, project_id) VALUES (?, ?)";
-                PreparedStatement statement = connection.prepareStatement(sql);
-                statement.setInt(1, student.getId());
-                statement.setInt(2, project.getId());
+            String insertSql = "INSERT INTO student_projects (student_id, project_id) VALUES (?, ?)";
+            PreparedStatement insertStatement = connection.prepareStatement(insertSql);
 
-                int affectedRows = statement.executeUpdate();
-                if (affectedRows == 0) {
-                    throw new SQLException("Creating student project failed, no rows affected.");
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
+            for (Project project : projects) {
+                insertStatement.setInt(1, student.getId());
+                insertStatement.setInt(2, project.getId());
+                insertStatement.executeUpdate();
             }
+
+            System.out.println("Student-Project relationships updated successfully.");
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+    }
 
 }

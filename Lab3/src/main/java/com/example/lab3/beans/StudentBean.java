@@ -18,19 +18,22 @@ import java.util.List;
 @ViewScoped
 public class StudentBean {
     private ProjectBean projectBean;
-    private String name = ""; // Initialize with an empty string
-    private List<Project> availableProjects;
-    private DualListModel<Project> projectsDualList;
+    private String name = "";
+    private List<Project> availableProjects=new ArrayList<>();
+    private DualListModel<String> projectsDualList;
     private List<Student> students;
-    private Student selectedStudent; // Field to hold the selected student for editing
+    private Student selectedStudent;
 
     public StudentBean() {
         students = StudentDAO.getAllStudents();
         projectBean = new ProjectBean();
         availableProjects = projectBean.getProjects();
-        projectsDualList=new DualListModel<>(availableProjects, new ArrayList<>());
-        if(projectsDualList !=null)
-            System.out.println("size");
+        List<String> projectsSource = new ArrayList<>();
+        for(Project p:availableProjects){
+            projectsSource.add(p.getName());
+        }
+        List<String> projectsTarget = new ArrayList<>();
+        projectsDualList=new DualListModel<>(projectsSource, projectsTarget);
     }
 
     public List<Student> getStudents() {
@@ -44,13 +47,25 @@ public class StudentBean {
     public void saveStudent() {
         System.out.println("saveStudent " + name);
         Student insertedStudent = StudentDAO.insertStudent(name);
-
-        // Update the list of students
+        List<Project> selectedProjects = new ArrayList<>();
+        for(String projectName:projectsDualList.getTarget()){
+            if(findProjectByName(projectName)!=null)
+                selectedProjects.add(findProjectByName(projectName));
+        }
+        StudentProjectDAO.updateStudentProjects(insertedStudent, selectedProjects);
         students = StudentDAO.getAllStudents();
-        name = null; // Clear the newStudent form after saving
+        name = null;
+    }
+
+    public void deleteStudent(Student student) {
+        StudentDAO.deleteStudent(student);
+        students = StudentDAO.getAllStudents();
     }
 
     public void openEditDialog(Student student) {
+        selectedStudent = student;
+    }
+    public void openEditProjectsDialog(Student student) {
         selectedStudent = student;
     }
 
@@ -61,6 +76,27 @@ public class StudentBean {
             selectedStudent = null; // Clear the selected student
         }
     }
+    public void saveEditedStudentProjects() {
+        if (selectedStudent != null) {
+            List<Project> selectedProjects = new ArrayList<>();
+            for(String projectName:projectsDualList.getTarget()){
+                if(findProjectByName(projectName)!=null)
+                    selectedProjects.add(findProjectByName(projectName));
+            }
+            StudentProjectDAO.updateStudentProjects(selectedStudent, selectedProjects);
+            selectedStudent = null;
+        }
+    }
+    private Project findProjectByName(String name) {
+        for (Project project : availableProjects) {
+            if (project.getName().equals(name)) {
+                return project;
+            }
+        }
+        return null;
+    }
+
+
 
     public String getName() {
         return name;
@@ -69,11 +105,11 @@ public class StudentBean {
     public void setName(String name) {
         this.name = name;
     }
-    public DualListModel<Project> getProjectsDualList() {
+    public DualListModel<String> getProjectsDualList() {
         return projectsDualList;
     }
 
-    public void setProjectsDualList(DualListModel<Project> projectDualListModel) {
+    public void setProjectsDualList(DualListModel<String> projectDualListModel) {
         this.projectsDualList = projectDualListModel;
     }
     public List<Project> getAvailableProjects() {

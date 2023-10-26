@@ -10,7 +10,10 @@
         <h:form id="studentForm">
             <h:outputLabel for="studentName" value="Student Name:" />
             <p:inputText id="studentName" value="#{studentBean.name}" />
-
+            <div class="card">
+                <h5 style="margin-top: 0">Project Lists</h5>
+                <p:pickList id="pickProjects" value="#{studentBean.projectsDualList}" var="projectsDualList" itemValue="#{projectsDualList}" itemLabel="#{projectsDualList}" />
+            </div>
             <p:commandButton value="Save Student" action="#{studentBean.saveStudent}" oncomplete="PF('studentDialog').hide()" update="form"/>
         </h:form>
     </p:dialog>
@@ -20,8 +23,17 @@
                 <h:outputLabel for="editStudentName" value="Student Name:" />
                 <p:inputText id="editStudentName" value="#{studentBean.selectedStudent.name}" />
 
-                <!-- Add a "Save" button for saving the edited student -->
                 <p:commandButton value="Save" actionListener="#{studentBean.saveEditedStudent}" update="form" oncomplete="PF('editStudentDialog').hide()" />
+            </h:form>
+        </p:dialog>
+
+        <p:dialog header="Edit Projects" widgetVar="editStudentProjectsDialog" modal="true" resizable="false">
+            <h:form id="editStudentProjectsForm">
+                <div class="card">
+                    <h5 style="margin-top: 0">Project Lists</h5>
+                    <p:pickList id="pickList" value="#{studentBean.projectsDualList}" var="projectsDualList" itemValue="#{projectsDualList}" itemLabel="#{projectsDualList}" />
+                </div>
+                <p:commandButton value="Save" actionListener="#{studentBean.saveEditedStudentProjects}" update="form" oncomplete="PF('editStudentProjectsDialog').hide()" />
             </h:form>
         </p:dialog>
 
@@ -46,7 +58,12 @@
                     </p:column>
                 </p:dataTable>
             </p:column>
-
+            <p:column headerText="Edit Projects">
+                <p:commandButton value="EditProjects" actionListener="#{studentBean.openEditProjectsDialog(student)}" oncomplete="PF('editStudentProjectsDialog').show()" />
+            </p:column>
+            <p:column headerText="Delete Student">
+                <p:commandButton value="Delete" actionListener="#{studentBean.deleteStudent(student)}" update="form"/>
+            </p:column>
         </p:dataTable>
         </h:form>
 </h:body>

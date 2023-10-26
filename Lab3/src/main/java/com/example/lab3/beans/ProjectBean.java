@@ -33,7 +33,7 @@ public class ProjectBean {
     }
     public void saveProject() {
         if (deadline != null) {
-                Logger logger = Logger.getLogger(getClass().getName()); // Get the logger for the current class
+                Logger logger = Logger.getLogger(getClass().getName());
 
                 logger.log(Level.INFO, "Save Project called");
 
@@ -66,6 +66,10 @@ public class ProjectBean {
             ProjectDAO.updateProject(selectedProject);
             selectedProject = null;
         }
+    }
+    public void deleteProject(Project project) {
+        ProjectDAO.deleteProject(project);
+        projects.remove(project);
     }
 
     public String getName() {

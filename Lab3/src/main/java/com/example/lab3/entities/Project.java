@@ -57,4 +57,8 @@ public class Project {
     public void setDeadline(Date deadline) {
         this.deadline = deadline;
     }
+    public String getIdentifier() {
+        return this.toString();
+    }
+
 }

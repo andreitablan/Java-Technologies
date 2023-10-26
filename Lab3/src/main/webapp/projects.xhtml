@@ -77,8 +77,11 @@
             <p:column headerText="Project Deadline">
                 <h:outputText value="#{project.deadline}"/>
             </p:column>
-            <p:column>
+            <p:column headerText="Edit project">
                 <p:commandButton value="Edit" actionListener="#{projectBean.openEditDialog(project)}" oncomplete="PF('editProjectDialog').show()" />
+            </p:column>
+            <p:column headerText="Delete project">
+                <p:commandButton value="Delete" actionListener="#{projectBean.deleteProject(project)}" update="form" />
             </p:column>
         </p:dataTable>
 
