@@ -1,5 +1,8 @@
 package com.example.lab3.entities;
 
+/**
+ * StudentProject entity
+ */
 public class StudentProject {
     private int studentId;
     private int projectId;

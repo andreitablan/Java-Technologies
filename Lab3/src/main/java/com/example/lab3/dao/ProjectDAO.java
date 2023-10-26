@@ -5,6 +5,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * DAO class for the projects - handles the database operations
+ */
 public class ProjectDAO {
     private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String USERNAME = "postgres";
@@ -82,9 +85,5 @@ public class ProjectDAO {
             e.printStackTrace();
         }
     }
-
-
-
-
 }
 

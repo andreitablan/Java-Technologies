@@ -4,22 +4,22 @@ import com.example.lab3.dao.StudentDAO;
 import com.example.lab3.dao.StudentProjectDAO;
 import com.example.lab3.entities.Project;
 import com.example.lab3.entities.Student;
-import com.example.lab3.entities.StudentProject;
 import org.primefaces.model.DualListModel;
 
-import javax.faces.annotation.ManagedProperty;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import javax.faces.bean.ViewScoped;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Student bean for the management of the students
+ */
 @ManagedBean
 @ViewScoped
 public class StudentBean {
     private ProjectBean projectBean;
     private String name = "";
-    private List<Project> availableProjects=new ArrayList<>();
+    private List<Project> availableProjects;
     private DualListModel<String> projectsDualList;
     private List<Student> students;
     private Student selectedStudent;
@@ -45,7 +45,6 @@ public class StudentBean {
     }
 
     public void saveStudent() {
-        System.out.println("saveStudent " + name);
         Student insertedStudent = StudentDAO.insertStudent(name);
         List<Project> selectedProjects = new ArrayList<>();
         for(String projectName:projectsDualList.getTarget()){
@@ -71,9 +70,8 @@ public class StudentBean {
 
     public void saveEditedStudent() {
         if (selectedStudent != null) {
-            // Call the DAO method to update the student in the database
             StudentDAO.updateStudent(selectedStudent);
-            selectedStudent = null; // Clear the selected student
+            selectedStudent = null;
         }
     }
     public void saveEditedStudentProjects() {
@@ -95,7 +93,6 @@ public class StudentBean {
         }
         return null;
     }
-
 
 
     public String getName() {

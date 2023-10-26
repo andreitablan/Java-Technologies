@@ -2,17 +2,15 @@ package com.example.lab3.beans;
 
 import com.example.lab3.dao.ProjectDAO;
 import com.example.lab3.entities.Project;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
+/**
+ * Project bean for the project management
+ */
 @ManagedBean
 @RequestScoped
 @SessionScoped
@@ -31,24 +29,15 @@ public class ProjectBean {
     public List<Project> getProjects() {
         return projects;
     }
+    
     public void saveProject() {
         if (deadline != null) {
-                Logger logger = Logger.getLogger(getClass().getName());
-
-                logger.log(Level.INFO, "Save Project called");
-
                 java.sql.Date sqlDate = new java.sql.Date(deadline.getTime());
 
-                logger.log(Level.INFO, "sqlDate: " + sqlDate);
-
                 Project newProject = new Project(15, name, category, description, sqlDate);
-                if(newProject !=null)
-                    System.out.println("project not null");
                 ProjectDAO.addProject(newProject);
 
-                logger.log(Level.INFO, "Project added to the database");
-
-                projects = ProjectDAO.getAllProjects(); // Refresh the project list after adding a new project
+                projects = ProjectDAO.getAllProjects();
                 name = "";
                 description = "";
                 category = "";

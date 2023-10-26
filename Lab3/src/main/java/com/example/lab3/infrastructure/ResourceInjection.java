@@ -5,8 +5,10 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-
-public class ResourceInjectionExample {
+/**
+ * Lab 4 compulsory
+ */
+public class ResourceInjection {
     @Resource(lookup = "java:/PostgresDS")
     private DataSource dataSource;
 

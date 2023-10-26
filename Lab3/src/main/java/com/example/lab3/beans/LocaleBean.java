@@ -6,6 +6,9 @@ import javax.faces.context.FacesContext;
 import java.io.Serializable;
 import java.util.Locale;
 
+/**
+ * Locale bean for the internationalization of the application
+ */
 @ManagedBean
 @SessionScoped
 public class LocaleBean implements Serializable {
@@ -19,7 +22,6 @@ public class LocaleBean implements Serializable {
     }
 
     public String changeLocale(String localeCode) {
-        System.out.println("Changing locale to " + localeCode);
         currentLocale = new Locale(localeCode);
         FacesContext.getCurrentInstance().getViewRoot().setLocale(currentLocale);
         return null;

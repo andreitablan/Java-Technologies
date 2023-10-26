@@ -7,6 +7,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * DAO for the student_project table - handles the many-to-many relationship between students and projects
+ */
 public class StudentProjectDAO {
     private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String USERNAME = "postgres";
@@ -41,8 +44,6 @@ public class StudentProjectDAO {
         return projects;
     }
     public static void updateStudentProjects(Student student, List<Project> projects) {
-        for(Project project : projects)
-            System.out.println(project.getName());
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
             String deleteSql = "DELETE FROM student_projects WHERE student_id = ?";
             PreparedStatement deleteStatement = connection.prepareStatement(deleteSql);
@@ -58,7 +59,6 @@ public class StudentProjectDAO {
                 insertStatement.executeUpdate();
             }
 
-            System.out.println("Student-Project relationships updated successfully.");
         } catch (SQLException e) {
             e.printStackTrace();
         }
