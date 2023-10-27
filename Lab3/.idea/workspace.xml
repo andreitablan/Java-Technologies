@@ -11,17 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="18f947e2-7518-4998-b843-0cd832c97bc6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/LocaleBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/LocaleBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/ProjectBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/ProjectBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/StudentBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/StudentBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/StudentProjectBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/ProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/ProjectDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/StudentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/StudentProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/dao/StudentProjectDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entities/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entities/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entities/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entities/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entities/StudentProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entities/StudentProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/infrastructure/ResourceInjectionExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/infrastructure/ResourceInjection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,6 +243,7 @@
       <workItem from="1698309440679" duration="5447000" />
       <workItem from="1698317472755" duration="13331000" />
       <workItem from="1698341495519" duration="7933000" />
+      <workItem from="1698382519163" duration="4129000" />
     </task>
     <servers />
   </component>
