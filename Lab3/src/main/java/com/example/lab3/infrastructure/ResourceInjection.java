@@ -11,7 +11,9 @@ import java.sql.SQLException;
 public class ResourceInjection {
     @Resource(lookup = "java:/PostgresDS")
     private DataSource dataSource;
-
+    public DataSource getDataSource() {
+        return dataSource;
+    }
     public void performDatabaseOperation() {
         try (Connection connection = dataSource.getConnection()) {
         } catch (SQLException e) {
