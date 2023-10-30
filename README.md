@@ -36,7 +36,7 @@
 ## Laboratory 4
 - **Compulsory:**
  	- Configure a connection pool and a JDBC resource using an administrative tool. I used Wildfly.
-   	- Create DatSource objects using either JNDI directly or resource injection. I created a ResourceInjection Class.
+   	- Create DatSource objects using either JNDI directly or resource injection. I created a DatSource Class.
 - **Homework**
 	- Work in progress...
 
