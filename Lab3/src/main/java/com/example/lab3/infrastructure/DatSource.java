@@ -8,7 +8,7 @@ import java.sql.SQLException;
 /**
  * Lab 4 compulsory
  */
-public class ResourceInjection {
+public class DatSource {
     @Resource(lookup = "java:/PostgresDS")
     private DataSource dataSource;
     public DataSource getDataSource() {
