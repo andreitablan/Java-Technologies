@@ -10,13 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18f947e2-7518-4998-b843-0cd832c97bc6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/footer.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/header.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/menu.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/page.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6746006b-d11a-4fd6-9666-cbb8e9b0d037.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6746006b-d11a-4fd6-9666-cbb8e9b0d037.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6746006b-d11a-4fd6-9666-cbb8e9b0d037/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6746006b-d11a-4fd6-9666-cbb8e9b0d037/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6746006b-d11a-4fd6-9666-cbb8e9b0d037.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/infrastructure/ResourceInjection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/infrastructure/DatSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages_ro.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_ro.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +89,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/GitHub/Java-Technologies/Lab3/src/main/webapp",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -90,7 +97,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -103,7 +110,13 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.lab3" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitHub\Java-Technologies\Lab3\src\main\webapp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\Java-Technologies\Lab3\src\main\webapp\WEB-INF\templates" />
+      <recent name="C:\GitHub\Java-Technologies\Lab3\src\main\webapp\WEB-INF" />
+      <recent name="C:\GitHub\Java-Technologies\Lab3\src\main\webapp\decorators" />
       <recent name="C:\GitHub\Java-Technologies\Lab3\src\main\resources\META-INF" />
     </key>
   </component>
@@ -270,6 +283,9 @@
       <workItem from="1698680529155" duration="218000" />
       <workItem from="1698680841975" duration="2580000" />
       <workItem from="1698697370755" duration="470000" />
+      <workItem from="1698742189334" duration="627000" />
+      <workItem from="1698744630198" duration="1405000" />
+      <workItem from="1698839492451" duration="5195000" />
     </task>
     <servers />
   </component>
