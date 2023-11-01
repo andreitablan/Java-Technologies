@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/composite">
 <f:view  locale="#{localeBean.currentLocale}">
 <h:head>
     <title>#{msgs.projectsTitle}</title>
@@ -58,34 +59,45 @@
     <h:form id="form">
         <p:commandButton value="#{msgs.backToWelcomePageButton}" action="backToIndex" icon="pi pi-arrow-left" styleClass="p-button p-button-rounded"  style="margin-right: 10px;"/>
         <p:commandButton value="#{msgs.addProjectButton}" oncomplete="PF('projectDialog').show()"  style="margin-right: 10px;"/>
-
-
-
-        <p:dataTable var="project" value="#{projectBean.projects}">
-            <p:column headerText="#{msgs.projectID}">
-                <h:outputText value="#{project.id}"/>
-            </p:column>
-            <p:column headerText="#{msgs.projectName}">
-                <h:outputText value="#{project.name}"/>
-            </p:column>
-            <p:column headerText="#{msgs.projectCategory}">
-                <h:outputText value="#{project.category}"/>
-            </p:column>
-            <p:column headerText="#{msgs.projectDescription}">
-                <h:outputText value="#{project.description}"/>
-            </p:column>
-            <p:column headerText="#{msgs.projectDeadline}">
-                <h:outputText value="#{project.deadline}"/>
-            </p:column>
-            <p:column headerText="#{msgs.editProject}">
-                <p:commandButton value="#{msgs.editProjectButton}" actionListener="#{projectBean.openEditDialog(project)}" oncomplete="PF('editProjectDialog').show()" update="form" />
-            </p:column>
-            <p:column headerText="#{msgs.deleteProject}">
-                <p:commandButton value="#{msgs.deleteProjectButton}" actionListener="#{projectBean.deleteProject(project)}" update="form" />
-            </p:column>
-        </p:dataTable>
-
     </h:form>
+    !-- Include the DataTable using the template -->
+    <ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                    xmlns:h="http://xmlns.jcp.org/jsf/html"
+                    xmlns:p="http://primefaces.org/ui"
+                    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+        <ui:decorate template="/WEB-INF/templates/dataView.xhtml">
+            <ui:define name="columns">
+                <p:dataTable var="project" value="#{projectBean.projects}">
+                    <p:column headerText="#{msgs.projectID}">
+                        <h:outputText value="#{project.id}"/>
+                    </p:column>
+                    <p:column headerText="#{msgs.projectName}">
+                        <h:outputText value="#{project.name}"/>
+                    </p:column>
+                    <p:column headerText="#{msgs.projectCategory}">
+                        <h:outputText value="#{project.category}"/>
+                    </p:column>
+                    <p:column headerText="#{msgs.projectDescription}">
+                        <h:outputText value="#{project.description}"/>
+                    </p:column>
+                    <p:column headerText="#{msgs.projectDeadline}">
+                        <h:outputText value="#{project.deadline}"/>
+                    </p:column>
+                    <p:column headerText="#{msgs.editProject}">
+                        <p:commandButton value="#{msgs.editProjectButton}" actionListener="#{projectBean.openEditDialog(project)}" oncomplete="PF('editProjectDialog').show()" update="form" />
+                    </p:column>
+                    <p:column headerText="#{msgs.deleteProject}">
+                        <p:commandButton value="#{msgs.deleteProjectButton}" actionListener="#{projectBean.deleteProject(project)}" update="form" />
+                    </p:column>
+                </p:dataTable>
+            </ui:define>
+        </ui:decorate>
+
+    </ui:composition>
+
+
+
 </h:body>
 </f:view>
 </html>

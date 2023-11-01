@@ -1,0 +1,13 @@
+<!-- data-table.xhtml -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:form id="dataTableForm">
+        <p:dataTable var="#{var}" value="#{value}">
+            <ui:insert name="columns"/>
+        </p:dataTable>
+    </h:form>
+
+</ui:composition>
