@@ -37,9 +37,10 @@
 - **Compulsory:**
  	- Configure a connection pool and a JDBC resource using an administrative tool. I used Wildfly.
    	- Create DatSource objects using either JNDI directly or resource injection. I created a DatSource Class.
-	- I implemented it but i have no data found when i use it. I hope i will solve it. 
+	- It works well.
 - **Homework**
  	- page.xhtml: describing the general aspect of the application pages: header, content, footer. The header display the title, and the location buttons en/ro. It includes a menu bar for navigating inside the application. 
 	- dataView.xhtml: a generic page for displaying data as a dataTable and a list.
-	- dataEdit : Work in progress...
+	- dataEdit.xhtml: a generic page for editing data. It is implemented, with other .xhtml files that are implementing this template. 
+	- Each dataEdit contains a component for displaying the timestamp of the last modification. 
 
