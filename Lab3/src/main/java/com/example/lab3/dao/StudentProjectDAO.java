@@ -2,6 +2,7 @@ package com.example.lab3.dao;
 
 import com.example.lab3.entities.Project;
 import com.example.lab3.entities.Student;
+import com.example.lab3.infrastructure.DatSource;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -17,8 +18,8 @@ public class StudentProjectDAO {
 
     public static List<Project> getProjectsForStudent(Student student) {
         List<Project> projects = new ArrayList<>();
-
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        DatSource datSource = DatSource.getInstance();
+        try (Connection connection = datSource.getConnection()) {
             String sql = "SELECT p.id, p.name, p.category, p.description, p.deadline " +
                     "FROM projects p " +
                     "INNER JOIN student_projects sp ON p.id = sp.project_id " +
@@ -44,7 +45,8 @@ public class StudentProjectDAO {
         return projects;
     }
     public static void updateStudentProjects(Student student, List<Project> projects) {
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        DatSource datSource = DatSource.getInstance();
+        try (Connection connection = datSource.getConnection()) {
             String deleteSql = "DELETE FROM student_projects WHERE student_id = ?";
             PreparedStatement deleteStatement = connection.prepareStatement(deleteSql);
             deleteStatement.setInt(1, student.getId());

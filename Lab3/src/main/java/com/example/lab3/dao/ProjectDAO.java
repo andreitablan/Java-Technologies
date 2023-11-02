@@ -1,5 +1,6 @@
 package com.example.lab3.dao;
 import com.example.lab3.entities.Project;
+import com.example.lab3.infrastructure.DatSource;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -15,8 +16,8 @@ public class ProjectDAO {
 
     public static List<Project> getAllProjects() {
         List<Project> projects = new ArrayList<>();
-
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        DatSource datSource = DatSource.getInstance();
+        try (Connection connection = datSource.getConnection()) {
             String sql = "SELECT * FROM projects";
             PreparedStatement statement = connection.prepareStatement(sql);
             ResultSet resultSet = statement.executeQuery();
@@ -38,7 +39,8 @@ public class ProjectDAO {
         return projects;
     }
     public static void addProject(Project project) {
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        DatSource datSource = DatSource.getInstance();
+        try (Connection connection = datSource.getConnection()) {
             connection.setAutoCommit(true); // Set auto-commit to true
             String sql = "INSERT INTO projects (name, category, description, deadline) VALUES (?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(sql);
@@ -54,7 +56,8 @@ public class ProjectDAO {
     }
 
     public static void updateProject(Project project) {
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        DatSource datSource = DatSource.getInstance();
+        try (Connection connection = datSource.getConnection()) {
             String sql = "UPDATE projects SET name = ?, category = ?, description = ?, deadline = ? WHERE id = ?";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, project.getName());
@@ -69,7 +72,8 @@ public class ProjectDAO {
         }
     }
     public static void deleteProject(Project project) {
-        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+        DatSource datSource = DatSource.getInstance();
+        try (Connection connection = datSource.getConnection()) {
             String deleteStudentProjectsSql = "DELETE FROM student_projects WHERE project_id = ?";
             PreparedStatement deleteStudentProjectsStatement = connection.prepareStatement(deleteStudentProjectsSql);
             deleteStudentProjectsStatement.setInt(1, project.getId());
