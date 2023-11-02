@@ -5,6 +5,8 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
 <p:dialog header="#{header}" widgetVar="#{widgetVar}" resizable="false" modal="true">
+    <h:outputText value="Last modified student: #{studentBean.lastModifiedTimestamp}" />
+    <h:outputText value="Last modified project: #{projectBean.lastModifiedTimestamp}" />
     <h:form id="#{widgetVar}" style="display: flex; flex-direction: column; gap: 10px;">
         <ui:insert name="inputs" />
         <p:commandButton value="Submit" action="#{action}" oncomplete="PF('#{widgetVar}').hide()"/>

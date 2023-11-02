@@ -24,6 +24,8 @@
     </ui:define>
 
     <ui:param name="header" value="#{msgs.addProjectButton}" />
+    <ui:param name="lastModified" value="#{projectBean.lastModifiedTimestamp}" />
     <ui:param name="widgetVar" value="projectDialog" />
     <ui:param name="action" value="#{projectBean.saveProject()}" />
+
 </ui:composition>

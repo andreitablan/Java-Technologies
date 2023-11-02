@@ -12,6 +12,7 @@
     </ui:define>
 
     <ui:param name="header" value="Add Student" />
+    <ui:param name="lastModified" value="#{studentBean.lastModifiedTimestamp}" />
     <ui:param name="widgetVar" value="studentDialog" />
     <ui:param name="action" value="#{studentBean.saveStudent()}" />
 </ui:composition>

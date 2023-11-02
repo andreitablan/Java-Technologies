@@ -9,6 +9,7 @@ import org.primefaces.model.DualListModel;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -23,6 +24,7 @@ public class StudentBean {
     private DualListModel<String> projectsDualList;
     private List<Student> students;
     private Student selectedStudent;
+    private Date lastModifiedTimestamp;
 
     public StudentBean() {
         students = StudentDAO.getAllStudents();
@@ -45,6 +47,8 @@ public class StudentBean {
     }
 
     public void saveStudent() {
+        lastModifiedTimestamp = new Date();
+
         Student insertedStudent = StudentDAO.insertStudent(name);
         List<Project> selectedProjects = new ArrayList<>();
         for(String projectName:projectsDualList.getTarget()){
@@ -129,5 +133,8 @@ public class StudentBean {
 
     public void setSelectedStudent(Student selectedStudent) {
         this.selectedStudent = selectedStudent;
+    }
+    public Date getLastModifiedTimestamp() {
+        return lastModifiedTimestamp;
     }
 }

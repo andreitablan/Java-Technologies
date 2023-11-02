@@ -21,6 +21,7 @@ public class ProjectBean {
     private String category;
     private Date deadline;
     private Project selectedProject;
+    private Date lastModifiedTimestamp;
 
     public ProjectBean() {
         projects = ProjectDAO.getAllProjects();
@@ -32,6 +33,7 @@ public class ProjectBean {
     
     public void saveProject() {
         if (deadline != null) {
+                lastModifiedTimestamp = new Date();
                 java.sql.Date sqlDate = new java.sql.Date(deadline.getTime());
 
                 Project newProject = new Project(15, name, category, description, sqlDate);
@@ -99,5 +101,9 @@ public class ProjectBean {
 
     public void setSelectedProject(Project selectedProject) {
         this.selectedProject = selectedProject;
+    }
+
+    public Date getLastModifiedTimestamp() {
+        return lastModifiedTimestamp;
     }
 }
