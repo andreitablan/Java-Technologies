@@ -2,11 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:my="http://java.sun.com/jsf/composite">
 
 <p:dialog header="#{header}" widgetVar="#{widgetVar}" resizable="false" modal="true">
     <h:outputText value="Last modified student: #{studentBean.lastModifiedTimestamp}" />
     <h:outputText value="Last modified project: #{projectBean.lastModifiedTimestamp}" />
+    <ui:include src="/WEB-INF/edit/dataInfo.xhtml">
+        <ui:param name="lastModified" value="#{lastModifiedTimestamp}" />
+    </ui:include>
     <h:form id="#{widgetVar}" style="display: flex; flex-direction: column; gap: 10px;">
         <ui:insert name="inputs" />
         <p:commandButton value="Submit" action="#{action}" oncomplete="PF('#{widgetVar}').hide()"/>

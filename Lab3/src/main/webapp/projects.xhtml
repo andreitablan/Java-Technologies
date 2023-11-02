@@ -4,7 +4,8 @@
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
                 template="/WEB-INF/view/dataView.xhtml">
-    <ui:param name="tableData" value="#{projectBean.projects}" />
+    <ui:param name="title" value="#{msgs.projectsTitle}" />
+    <ui:param name="elements" value="#{projectBean.projects}" />
      <ui:define name="columns">
 +      <p:column headerText="#{msgs.projectID}">
          <h:outputText value="#{item.id}"/>

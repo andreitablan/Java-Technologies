@@ -4,9 +4,9 @@
                 template="/WEB-INF/templates/page.xhtml"
                 xmlns:p="http://primefaces.org/ui">
     <ui:define name="content">
-        <h1><ui:insert name="title">Students List</ui:insert></h1>
+        <h1><ui:insert name="title">#{title}</ui:insert></h1>
         <h:form id="itemsForm">
-            <p:dataTable value="#{tableData}" var="item" stickyHeader="true" stickyTopAt=".layout-topbar" paginator="true" rows="5">
+            <p:dataTable value="#{elements}" var="item" paginator="true" rows="8">
                 <ui:insert name="columns" />
             </p:dataTable>
         </h:form>

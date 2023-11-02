@@ -5,8 +5,8 @@
                 xmlns:p="http://primefaces.org/ui"
                 template="/WEB-INF/view/dataView.xhtml">
 
-<ui:define name="title">Students</ui:define>
-<ui:param name="tableData" value="#{studentBean.students}" />
+    <ui:param name="title" value="#{msgs.studentsTitle}" />
+<ui:param name="elements" value="#{studentBean.students}" />
 <ui:define name="columns">
     <p:column headerText="#{msgs.studentID}">
         <h:outputText value="#{item.id}" />

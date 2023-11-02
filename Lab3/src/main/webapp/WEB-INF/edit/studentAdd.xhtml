@@ -1,3 +1,4 @@
+<!-- add a student -->
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
@@ -12,7 +13,7 @@
     </ui:define>
 
     <ui:param name="header" value="Add Student" />
-    <ui:param name="lastModified" value="#{studentBean.lastModifiedTimestamp}" />
+    <ui:param name="lastModifiedTimestamp" value="#{studentBean.lastModifiedTimestamp}" />
     <ui:param name="widgetVar" value="studentDialog" />
     <ui:param name="action" value="#{studentBean.saveStudent()}" />
 </ui:composition>
