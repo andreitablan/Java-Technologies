@@ -34,6 +34,7 @@
   	- Internationalize the user interface and offer support for at least two locales. (I used English and Romanian)
 
 ## Laboratory 4
+- **The same project, Lab 3**
 - **Compulsory:**
  	- Configure a connection pool and a JDBC resource using an administrative tool. I used Wildfly.
    	- Create DatSource objects using either JNDI directly or resource injection. I created a DatSource Class.
@@ -42,5 +43,11 @@
  	- page.xhtml: describing the general aspect of the application pages: header, content, footer. The header display the title, and the location buttons en/ro. It includes a menu bar for navigating inside the application. 
 	- dataView.xhtml: a generic page for displaying data as a dataTable and a list.
 	- dataEdit.xhtml: a generic page for editing data. It is implemented, with other .xhtml files that are implementing this template. 
-	- Each dataEdit contains a component for displaying the timestamp of the last modification. 
-
+	- Each dataEdit contains a component for displaying the timestamp of the last modification.
+ 
+## Laboratory 5
+- **The same project, Lab 3**
+- **Compulsory:**
+	- Define the persistence unit using a data source configured as a JDBC Resource.
+- **Homework**
+	- Work in progress..
