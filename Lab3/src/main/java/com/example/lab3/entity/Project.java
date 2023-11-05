@@ -8,6 +8,10 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "projects", schema = "public", catalog = "postgres")
+@NamedQueries({
+        @NamedQuery(name = "Project.findAll", query = "SELECT p FROM Project p"),
+        @NamedQuery(name = "Project.findById", query = "SELECT p FROM Project p WHERE p.id = :id")
+})
 public class Project {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

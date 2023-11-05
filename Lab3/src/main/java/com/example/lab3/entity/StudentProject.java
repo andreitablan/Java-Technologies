@@ -6,6 +6,12 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "student_projects", schema = "public", catalog = "postgres")
+@NamedQueries({
+        @NamedQuery(name = "StudentProject.getProjectsForStudent",
+                query = "SELECT p.id, p.name, p.category, p.description, p.deadline FROM Project p INNER JOIN StudentProject sp ON p.id = sp.projectId WHERE sp.studentId = :studentId"),
+        @NamedQuery(name = "StudentProject.deleteStudentProjects",
+                query = "DELETE FROM StudentProject sp WHERE sp.studentId = :studentId")
+})
 public class StudentProject {
     @Basic
     @Column(name = "student_id")

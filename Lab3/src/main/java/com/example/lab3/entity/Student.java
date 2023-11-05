@@ -7,6 +7,10 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "students", schema = "public", catalog = "postgres")
+@NamedQueries({
+        @NamedQuery(name = "Student.findAll", query = "SELECT s FROM Student s"),
+        @NamedQuery(name = "Student.findById", query = "SELECT s FROM Student s WHERE s.id = :id")
+})
 public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
