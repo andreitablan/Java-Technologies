@@ -1,7 +1,7 @@
 package com.example.lab3.entities;
 
 /**
- * StudentProject entity
+ * StudentProject com.example.lab3.entity
  */
 public class StudentProject {
     private int studentId;

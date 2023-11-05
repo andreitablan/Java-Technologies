@@ -3,7 +3,7 @@ package com.example.lab3.entities;
 import java.sql.Date;
 
 /**
- * Project entity
+ * Project com.example.lab3.entity
  */
 public class Project {
     private int id;
