@@ -49,5 +49,8 @@
 - **The same project, Lab 3**
 - **Compulsory:**
 	- Define the persistence unit using a data source configured as a JDBC Resource.
+ 	- Define at least one entity class and perform a simple test to verify the communication with the database.
 - **Homework**
-	- Work in progress..
+	- Define the mappings using JPA-only annotations.
+	- Create named queries using JPA-QL.
+ 	- Work in progress..
