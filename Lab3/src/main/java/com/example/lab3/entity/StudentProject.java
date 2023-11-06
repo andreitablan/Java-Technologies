@@ -1,6 +1,6 @@
 package com.example.lab3.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.Objects;
 

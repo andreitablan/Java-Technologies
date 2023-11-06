@@ -2,12 +2,15 @@ package com.example.lab3.repository;
 import com.example.lab3.entity.Project;
 import com.example.lab3.entity.Student;
 import com.example.lab3.entity.StudentProject;
+
+import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.List;
 
+@ApplicationScoped
 public class StudentProjectRepository {
 
     @PersistenceContext(unitName = "default")

@@ -1,7 +1,6 @@
 package com.example.lab3.entity;
 
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 import java.sql.Date;
 import java.util.Collection;
 import java.util.Objects;
@@ -31,7 +30,6 @@ public class Project {
     private Date deadline;
     @OneToMany(mappedBy = "projectsByProjectId")
     private Collection<StudentProject> studentProjectsById;
-
     public int getId() {
         return id;
     }

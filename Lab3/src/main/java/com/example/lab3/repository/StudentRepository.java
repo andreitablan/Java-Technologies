@@ -1,4 +1,5 @@
 package com.example.lab3.repository;
+import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -9,7 +10,7 @@ import com.example.lab3.entity.Student;
 
 import javax.inject.Inject;
 import java.util.List;
-
+@ApplicationScoped
 public class StudentRepository {
 
     @PersistenceContext(unitName = "default")

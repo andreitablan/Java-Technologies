@@ -1,11 +1,12 @@
 package com.example.lab3.repository;
 import com.example.lab3.entity.Project;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.List;
-
+@ApplicationScoped
 public class ProjectRepository {
 
     @PersistenceContext(unitName = "default")
