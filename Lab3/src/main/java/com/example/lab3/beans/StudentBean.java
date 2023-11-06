@@ -1,7 +1,7 @@
 package com.example.lab3.beans;
 
-import com.example.lab3.entity.Projects;
-import com.example.lab3.entity.Students;
+import com.example.lab3.entity.Project;
+import com.example.lab3.entity.Student;
 import com.example.lab3.repository.StudentRepository;
 import com.example.lab3.repository.StudentProjectRepository;
 import org.primefaces.model.DualListModel;
@@ -27,10 +27,10 @@ public class StudentBean {
 
     private ProjectBean projectBean;
     private String name = "";
-    private List<Projects> availableProjects;
+    private List<Project> availableProjects;
     private DualListModel<String> projectsDualList;
-    private List<Students> students;
-    private Students selectedStudent;
+    private List<Student> students;
+    private Student selectedStudent;
     private Date lastModifiedTimestamp;
 
     public StudentBean() {
@@ -38,26 +38,26 @@ public class StudentBean {
         projectBean = new ProjectBean();
         availableProjects = projectBean.getProjects();
         List<String> projectsSource = new ArrayList<>();
-        for(Projects p:availableProjects){
+        for(Project p:availableProjects){
             projectsSource.add(p.getName());
         }
         List<String> projectsTarget = new ArrayList<>();
         projectsDualList=new DualListModel<>(projectsSource, projectsTarget);
     }
 
-    public List<Students> getStudents() {
+    public List<Student> getStudents() {
         return students;
     }
 
-    public List<Projects> getProjectsForStudent(Students student) {
+    public List<Project> getProjectsForStudent(Student student) {
         return studentProjectRepository.getProjectsForStudent(student);
     }
 
     public void saveStudent() {
         lastModifiedTimestamp = new Date();
 
-        Students insertedStudent = studentRepository.insertStudent(name);
-        List<Projects> selectedProjects = new ArrayList<>();
+        Student insertedStudent = studentRepository.insertStudent(name);
+        List<Project> selectedProjects = new ArrayList<>();
         for(String projectName:projectsDualList.getTarget()){
             if(findProjectByName(projectName)!=null)
                 selectedProjects.add(findProjectByName(projectName));
@@ -67,15 +67,15 @@ public class StudentBean {
         name = null;
     }
 
-    public void deleteStudent(Students student) {
+    public void deleteStudent(Student student) {
         studentRepository.deleteStudent(student);
         students = studentRepository.findAllStudents();
     }
 
-    public void openEditDialog(Students student) {
+    public void openEditDialog(Student student) {
         selectedStudent = student;
     }
-    public void openEditProjectsDialog(Students student) {
+    public void openEditProjectsDialog(Student student) {
         selectedStudent = student;
     }
 
@@ -87,7 +87,7 @@ public class StudentBean {
     }
     public void saveEditedStudentProjects() {
         if (selectedStudent != null) {
-            List<Projects> selectedProjects = new ArrayList<>();
+            List<Project> selectedProjects = new ArrayList<>();
             for(String projectName:projectsDualList.getTarget()){
                 if(findProjectByName(projectName)!=null)
                     selectedProjects.add(findProjectByName(projectName));
@@ -96,8 +96,8 @@ public class StudentBean {
             selectedStudent = null;
         }
     }
-    private Projects findProjectByName(String name) {
-        for (Projects project : availableProjects) {
+    private Project findProjectByName(String name) {
+        for (Project project : availableProjects) {
             if (project.getName().equals(name)) {
                 return project;
             }
@@ -120,11 +120,11 @@ public class StudentBean {
     public void setProjectsDualList(DualListModel<String> projectDualListModel) {
         this.projectsDualList = projectDualListModel;
     }
-    public List<Projects> getAvailableProjects() {
+    public List<Project> getAvailableProjects() {
         return this.availableProjects;
     }
 
-    public void setAvailableProjects(List<Projects> availableProjects) {
+    public void setAvailableProjects(List<Project> availableProjects) {
         this.availableProjects = availableProjects;
     }
     public ProjectBean getProjectBean() {
@@ -134,11 +134,11 @@ public class StudentBean {
     public void setProjectBean(ProjectBean projectBean) {
         this.projectBean = projectBean;
     }
-    public Students getSelectedStudent() {
+    public Student getSelectedStudent() {
         return selectedStudent;
     }
 
-    public void setSelectedStudent(Students selectedStudent) {
+    public void setSelectedStudent(Student selectedStudent) {
         this.selectedStudent = selectedStudent;
     }
     public Date getLastModifiedTimestamp() {

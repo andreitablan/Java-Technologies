@@ -9,10 +9,10 @@ import java.util.Objects;
 @Entity
 @Table(name = "projects", schema = "public", catalog = "postgres")
 @NamedQueries({
-        @NamedQuery(name = "Project.findAll", query = "SELECT p FROM Projects p"),
-        @NamedQuery(name = "Project.findById", query = "SELECT p FROM Projects p WHERE p.id = :id")
+        @NamedQuery(name = "Project.findAll", query = "SELECT p FROM Project p"),
+        @NamedQuery(name = "Project.findById", query = "SELECT p FROM Project p WHERE p.id = :id")
 })
-public class Projects {
+public class Project {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
@@ -76,7 +76,7 @@ public class Projects {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Projects projects = (Projects) o;
+        Project projects = (Project) o;
         return id == projects.id && Objects.equals(name, projects.name) && Objects.equals(category, projects.category) && Objects.equals(description, projects.description) && Objects.equals(deadline, projects.deadline);
     }
 

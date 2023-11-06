@@ -8,7 +8,7 @@ import java.util.Objects;
 @Table(name = "student_projects", schema = "public", catalog = "postgres")
 @NamedQueries({
         @NamedQuery(name = "StudentProject.getProjectsForStudent",
-                query = "SELECT p.id, p.name, p.category, p.description, p.deadline FROM Projects p INNER JOIN StudentProjects sp ON p.id = sp.projectId WHERE sp.studentId = :studentId"),
+                query = "SELECT p.id, p.name, p.category, p.description, p.deadline FROM Project p INNER JOIN StudentProjects sp ON p.id = sp.projectId WHERE sp.studentId = :studentId"),
         @NamedQuery(name = "StudentProject.deleteStudentProjects",
                 query = "DELETE FROM StudentProjects sp WHERE sp.studentId = :studentId")
 })
@@ -25,10 +25,10 @@ public class StudentProjects {
     private int id;
     @ManyToOne
     @JoinColumn(name = "student_id", referencedColumnName = "id")
-    private Students studentsByStudentId;
+    private Student studentByStudentId;
     @ManyToOne
     @JoinColumn(name = "project_id", referencedColumnName = "id")
-    private Students projectsByProjectId;
+    private Student projectsByProjectId;
 
     public Integer getStudentId() {
         return studentId;
@@ -67,11 +67,11 @@ public class StudentProjects {
         return Objects.hash(studentId, projectId, id);
     }
 
-    public Students getStudentsByStudentId() {
-        return studentsByStudentId;
+    public Student getStudentsByStudentId() {
+        return studentByStudentId;
     }
 
-    public void setStudentsByStudentId(Students studentsByStudentId) {
-        this.studentsByStudentId = studentsByStudentId;
+    public void setStudentsByStudentId(Student studentByStudentId) {
+        this.studentByStudentId = studentByStudentId;
     }
 }

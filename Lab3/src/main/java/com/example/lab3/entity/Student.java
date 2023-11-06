@@ -8,10 +8,10 @@ import java.util.Objects;
 @Entity
 @Table(name = "students", schema = "public", catalog = "postgres")
 @NamedQueries({
-        @NamedQuery(name = "Student.findAll", query = "SELECT s FROM Students s"),
-        @NamedQuery(name = "Student.findById", query = "SELECT s FROM Students s WHERE s.id = :id")
+        @NamedQuery(name = "Student.findAll", query = "SELECT s FROM Student s"),
+        @NamedQuery(name = "Student.findById", query = "SELECT s FROM Student s WHERE s.id = :id")
 })
-public class Students {
+public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
@@ -19,7 +19,7 @@ public class Students {
     @Basic
     @Column(name = "name")
     private String name;
-    @OneToMany(mappedBy = "studentsByStudentId")
+    @OneToMany(mappedBy = "studentByStudentId")
     private Collection<StudentProjects> studentProjectsById;
 
 
@@ -43,7 +43,7 @@ public class Students {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Students students = (Students) o;
+        Student students = (Student) o;
         return id == students.id && Objects.equals(name, students.name);
     }
 

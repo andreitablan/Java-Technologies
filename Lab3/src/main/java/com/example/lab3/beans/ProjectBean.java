@@ -1,6 +1,6 @@
 package com.example.lab3.beans;
 
-import com.example.lab3.entity.Projects;
+import com.example.lab3.entity.Project;
 import com.example.lab3.repository.ProjectRepository;
 
 import jakarta.enterprise.context.RequestScoped;
@@ -17,19 +17,19 @@ import java.util.List;
 public class ProjectBean {
     @Inject
     private ProjectRepository projectRepository;
-    private List<Projects> projects;
+    private List<Project> projects;
     private String name;
     private String description;
     private String category;
     private Date deadline;
-    private Projects selectedProject;
+    private Project selectedProject;
     private Date lastModifiedTimestamp;
 
     public ProjectBean() {
         projects = projectRepository.getAllProjects();
     }
 
-    public List<Projects> getProjects() {
+    public List<Project> getProjects() {
         return projects;
     }
 
@@ -38,7 +38,7 @@ public class ProjectBean {
                 lastModifiedTimestamp = new Date();
                 java.sql.Date sqlDate = new java.sql.Date(deadline.getTime());
 
-                Projects project = new Projects();
+                Project project = new Project();
                 project.setName(name);
                 project.setDescription(description);
                 project.setCategory(category);
@@ -53,7 +53,7 @@ public class ProjectBean {
         }
     }
 
-    public void openEditDialog(Projects project) {
+    public void openEditDialog(Project project) {
         selectedProject = project;
     }
 
@@ -64,7 +64,7 @@ public class ProjectBean {
             selectedProject = null;
         }
     }
-    public void deleteProject(Projects project) {
+    public void deleteProject(Project project) {
         projectRepository.deleteProject(project);
         projects.remove(project);
     }
@@ -101,11 +101,11 @@ public class ProjectBean {
         this.deadline = deadline;
     }
 
-    public Projects getSelectedProject() {
+    public Project getSelectedProject() {
         return selectedProject;
     }
 
-    public void setSelectedProject(Projects selectedProject) {
+    public void setSelectedProject(Project selectedProject) {
         this.selectedProject = selectedProject;
     }
 

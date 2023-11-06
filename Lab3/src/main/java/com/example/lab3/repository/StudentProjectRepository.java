@@ -1,8 +1,8 @@
 package com.example.lab3.repository;
 
-import com.example.lab3.entity.Projects;
+import com.example.lab3.entity.Project;
 import com.example.lab3.entity.StudentProjects;
-import com.example.lab3.entity.Students;
+import com.example.lab3.entity.Student;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
@@ -11,27 +11,30 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import java.util.List;
 
+/**
+ * Repository for the student-project entity
+ */
 @ApplicationScoped
 public class StudentProjectRepository {
 
     @PersistenceContext(unitName = "default")
     private EntityManager entityManager;
 
-    public List<Projects> getProjectsForStudent(Students student) {
-        TypedQuery<Projects> query = entityManager.createNamedQuery("StudentProject.getProjectsForStudent", Projects.class);
+    public List<Project> getProjectsForStudent(Student student) {
+        TypedQuery<Project> query = entityManager.createNamedQuery("StudentProject.getProjectsForStudent", Project.class);
         query.setParameter("studentId", student.getId());
         return query.getResultList();
     }
 
-    public void deleteStudentProjects(Students student) {
+    public void deleteStudentProjects(Student student) {
         entityManager.createNamedQuery("StudentProject.deleteStudentProjects")
                 .setParameter("studentId", student.getId())
                 .executeUpdate();
     }
     @Transactional
-    public void updateStudentProjects(Students student, List<Projects> projects) {
+    public void updateStudentProjects(Student student, List<Project> projects) {
         deleteStudentProjects(student);
-        for (Projects project : projects) {
+        for (Project project : projects) {
             StudentProjects studentProject = new StudentProjects();
             studentProject.setStudentId(student.getId());
             studentProject.setProjectId(project.getId());
