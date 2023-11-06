@@ -1,16 +1,16 @@
 package com.example.lab3.beans;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
+import javax.inject.Named;
 import java.io.Serializable;
 import java.util.Locale;
 
 /**
  * Locale bean for the internationalization of the application
  */
-@ManagedBean
-@SessionScoped
+@Named
+@RequestScoped
 public class LocaleBean implements Serializable {
     private Locale currentLocale;
 

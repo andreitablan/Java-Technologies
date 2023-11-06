@@ -1,13 +1,16 @@
 package com.example.lab3.beans;
 
-import com.example.lab3.dao.StudentDAO;
-import com.example.lab3.dao.StudentProjectDAO;
-import com.example.lab3.entities.Project;
-import com.example.lab3.entities.Student;
+import com.example.lab3.entity.Project;
+import com.example.lab3.entity.Student;
+import com.example.lab3.repository.StudentRepository;
+import com.example.lab3.repository.StudentProjectRepository;
 import org.primefaces.model.DualListModel;
 
+import javax.enterprise.context.RequestScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -15,9 +18,14 @@ import java.util.List;
 /**
  * Student bean for the management of the students
  */
-@ManagedBean
-@ViewScoped
+@Named
+@RequestScoped
 public class StudentBean {
+    @Inject
+    private StudentRepository studentRepository;
+    @Inject
+    private StudentProjectRepository studentProjectRepository;
+
     private ProjectBean projectBean;
     private String name = "";
     private List<Project> availableProjects;
@@ -27,7 +35,7 @@ public class StudentBean {
     private Date lastModifiedTimestamp;
 
     public StudentBean() {
-        students = StudentDAO.getAllStudents();
+        students = studentRepository.findAllStudents();
         projectBean = new ProjectBean();
         availableProjects = projectBean.getProjects();
         List<String> projectsSource = new ArrayList<>();
@@ -43,26 +51,26 @@ public class StudentBean {
     }
 
     public List<Project> getProjectsForStudent(Student student) {
-        return StudentProjectDAO.getProjectsForStudent(student);
+        return studentProjectRepository.getProjectsForStudent(student);
     }
 
     public void saveStudent() {
         lastModifiedTimestamp = new Date();
 
-        Student insertedStudent = StudentDAO.insertStudent(name);
+        Student insertedStudent = studentRepository.insertStudent(name);
         List<Project> selectedProjects = new ArrayList<>();
         for(String projectName:projectsDualList.getTarget()){
             if(findProjectByName(projectName)!=null)
                 selectedProjects.add(findProjectByName(projectName));
         }
-        StudentProjectDAO.updateStudentProjects(insertedStudent, selectedProjects);
-        students = StudentDAO.getAllStudents();
+        studentProjectRepository.updateStudentProjects(insertedStudent, selectedProjects);
+        students = studentRepository.findAllStudents();
         name = null;
     }
 
     public void deleteStudent(Student student) {
-        StudentDAO.deleteStudent(student);
-        students = StudentDAO.getAllStudents();
+        studentRepository.deleteStudent(student);
+        students = studentRepository.findAllStudents();
     }
 
     public void openEditDialog(Student student) {
@@ -74,7 +82,7 @@ public class StudentBean {
 
     public void saveEditedStudent() {
         if (selectedStudent != null) {
-            StudentDAO.updateStudent(selectedStudent);
+            studentRepository.updateStudent(selectedStudent);
             selectedStudent = null;
         }
     }
@@ -85,7 +93,7 @@ public class StudentBean {
                 if(findProjectByName(projectName)!=null)
                     selectedProjects.add(findProjectByName(projectName));
             }
-            StudentProjectDAO.updateStudentProjects(selectedStudent, selectedProjects);
+            studentProjectRepository.updateStudentProjects(selectedStudent, selectedProjects);
             selectedStudent = null;
         }
     }

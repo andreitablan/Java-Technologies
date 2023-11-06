@@ -1,20 +1,22 @@
 package com.example.lab3.beans;
 
-import com.example.lab3.dao.ProjectDAO;
-import com.example.lab3.entities.Project;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
+import com.example.lab3.entity.Project;
+import com.example.lab3.repository.ProjectRepository;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 import java.util.Date;
 import java.util.List;
 
 /**
  * Project bean for the project management
  */
-@ManagedBean
+@Named
 @RequestScoped
-@SessionScoped
 public class ProjectBean {
+    @Inject
+    private ProjectRepository projectRepository;
     private List<Project> projects;
     private String name;
     private String description;
@@ -24,22 +26,26 @@ public class ProjectBean {
     private Date lastModifiedTimestamp;
 
     public ProjectBean() {
-        projects = ProjectDAO.getAllProjects();
+        projects = projectRepository.getAllProjects();
     }
 
     public List<Project> getProjects() {
         return projects;
     }
-    
+
     public void saveProject() {
         if (deadline != null) {
                 lastModifiedTimestamp = new Date();
                 java.sql.Date sqlDate = new java.sql.Date(deadline.getTime());
 
-                Project newProject = new Project(15, name, category, description, sqlDate);
-                ProjectDAO.addProject(newProject);
+                Project project = new Project();
+                project.setName(name);
+                project.setDescription(description);
+                project.setCategory(category);
+                project.setDeadline(sqlDate);
+                projectRepository.saveProject(project);
 
-                projects = ProjectDAO.getAllProjects();
+                projects = projectRepository.getAllProjects();
                 name = "";
                 description = "";
                 category = "";
@@ -54,12 +60,12 @@ public class ProjectBean {
     public void saveEditedProject() {
         if (selectedProject != null && deadline != null) {
             selectedProject.setDeadline(new java.sql.Date(deadline.getTime()));
-            ProjectDAO.updateProject(selectedProject);
+            projectRepository.updateProject(selectedProject);
             selectedProject = null;
         }
     }
     public void deleteProject(Project project) {
-        ProjectDAO.deleteProject(project);
+        projectRepository.deleteProject(project);
         projects.remove(project);
     }
 

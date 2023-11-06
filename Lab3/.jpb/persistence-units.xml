@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit name="Default" persistenceXmlPath="src/main/resources/META-INF/persistence.xml">
+        <entities>
+          <entity value="com.example.lab3.entity.Project" />
+          <entity value="com.example.lab3.entity.StudentProject" />
+          <entity value="com.example.lab3.entity.Student" />
+        </entities>
+      </persistence-unit>
+    </persistence-units>
+  </component>
+</project>
