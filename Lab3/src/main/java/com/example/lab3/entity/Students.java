@@ -19,7 +19,7 @@ public class Students {
     @Basic
     @Column(name = "name")
     private String name;
-    @jakarta.persistence.OneToMany(mappedBy = "studentsByStudentId")
+    @OneToMany(mappedBy = "studentsByStudentId")
     private Collection<StudentProjects> studentProjectsById;
 
 
