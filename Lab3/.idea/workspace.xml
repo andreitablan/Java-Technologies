@@ -11,14 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="18f947e2-7518-4998-b843-0cd832c97bc6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/ProjectBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/ProjectBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/StudentBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/StudentBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Projects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/StudentProjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/StudentProjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/ProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/StudentProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/StudentProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/StudentRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,6 +303,7 @@
       <workItem from="1699264097051" duration="7846000" />
       <workItem from="1699293969777" duration="6358000" />
       <workItem from="1699304863777" duration="256000" />
+      <workItem from="1699305323244" duration="322000" />
     </task>
     <servers />
   </component>
