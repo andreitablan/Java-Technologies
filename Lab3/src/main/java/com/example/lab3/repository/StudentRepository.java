@@ -1,14 +1,11 @@
 package com.example.lab3.repository;
-import javax.enterprise.context.ApplicationScoped;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-import javax.transaction.Transactional;
+import com.example.lab3.entity.Students;
 
-import com.example.lab3.entity.Project;
-import com.example.lab3.entity.Student;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 
-import javax.inject.Inject;
 import java.util.List;
 @ApplicationScoped
 public class StudentRepository {
@@ -16,8 +13,8 @@ public class StudentRepository {
     @PersistenceContext(unitName = "default")
     private EntityManager entityManager;
 
-    public List<Student> findAllStudents() {
-        List<Student> students= entityManager.createNamedQuery("Student.findAll", Student.class).getResultList();
+    public List<Students> findAllStudents() {
+        List<Students> students= entityManager.createNamedQuery("Student.findAll", Students.class).getResultList();
         if(students != null && !students.isEmpty()){
             System.out.println("Students are not empty!");
         }
@@ -27,28 +24,28 @@ public class StudentRepository {
         return students;
     }
 
-    public Student findStudentById(int id) {
-        return entityManager.createNamedQuery("Student.findById", Student.class)
+    public Students findStudentById(int id) {
+        return entityManager.createNamedQuery("Student.findById", Students.class)
                 .setParameter("id", id)
                 .getSingleResult();
     }
 
     @Transactional
-    public Student insertStudent(String name) {
-        Student student = new Student();
+    public Students insertStudent(String name) {
+        Students student = new Students();
         student.setName(name);
         entityManager.persist(student);
         return student;
     }
 
     @Transactional
-    public void updateStudent(Student student) {
+    public void updateStudent(Students student) {
         entityManager.merge(student);
     }
 
     @Transactional
-    public void deleteStudent(Student student) {
-        Student managedStudent = entityManager.find(Student.class, student.getId());
+    public void deleteStudent(Students student) {
+        Students managedStudent = entityManager.find(Students.class, student.getId());
         if (managedStudent != null) {
             entityManager.remove(managedStudent);
         }

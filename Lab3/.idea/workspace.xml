@@ -10,16 +10,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18f947e2-7518-4998-b843-0cd832c97bc6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Projects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/StudentProjects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Students.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/.idea/artifacts/Lab5_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/.idea/artifacts/Lab5_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/beans/LocaleBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/beans/ProjectBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/beans/StudentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/infrastructure/DatSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/repository/ProjectRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/repository/StudentProjectRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/repository/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/resources/components/messageBox.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/resources/messages_ro.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/decorators/footer.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/decorators/header.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/decorators/lastModifiedInfo.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/decorators/menu.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/edit/dataInfo.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/edit/projectAdd.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/edit/projectEdit.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/edit/studentAdd.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/edit/studentEditName.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/edit/studentEditProjects.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/templates/dataEdit.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/templates/page.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/view/dataView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/main.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/projects.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/src/main/webapp/students.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/966f2ef1-20b8-4c78-ade0-9ebefae2bd16.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/966f2ef1-20b8-4c78-ade0-9ebefae2bd16.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/StudentProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/StudentProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/LocaleBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/LocaleBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/ProjectBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/ProjectBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/StudentBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/beans/StudentBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/entity/Projects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/entity/Students.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/entity/StudentProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/entity/StudentProjects.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/ProjectRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/StudentProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/StudentProjectRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab3/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +112,13 @@
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -102,10 +168,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.31724137",
-    "settings.editor.selected.configurable": "configurable.group.com.haulmont.jpb.tools",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -122,11 +188,11 @@
       <recent name="C:\GitHub\Java-Technologies\Lab3\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\Java-Technologies\Lab3\src\main\resources\META-INF" />
       <recent name="C:\GitHub\Java-Technologies\Lab3\src\main\resources" />
       <recent name="C:\GitHub\Java-Technologies\Lab3" />
       <recent name="C:\GitHub\Java-Technologies\Lab3\src\main" />
       <recent name="C:\GitHub\Java-Technologies\Lab3\src\main\webapp\WEB-INF\templates" />
-      <recent name="C:\GitHub\Java-Technologies\Lab3\src\main\webapp\WEB-INF\edit" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="entity" />
@@ -134,8 +200,21 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="JBoss/WildFly 24.0.1.Final1" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 24.0.1.Final1" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Lab3-1.0-SNAPSHOT/Lab3-1.0-SNAPSHOT" />
+    <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="DOMAIN" value="" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JBoss/WildFly 24.0.1.Final1" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 24.0.1.Final1" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Lab3:war exploded">
@@ -304,6 +383,7 @@
       <workItem from="1698999378471" duration="930000" />
       <workItem from="1699216786463" duration="4484000" />
       <workItem from="1699264097051" duration="7846000" />
+      <workItem from="1699293969777" duration="6358000" />
     </task>
     <servers />
   </component>

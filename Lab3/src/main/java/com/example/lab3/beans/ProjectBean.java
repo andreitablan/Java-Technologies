@@ -1,11 +1,11 @@
 package com.example.lab3.beans;
 
-import com.example.lab3.entity.Project;
+import com.example.lab3.entity.Projects;
 import com.example.lab3.repository.ProjectRepository;
 
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import java.util.Date;
 import java.util.List;
 
@@ -17,19 +17,19 @@ import java.util.List;
 public class ProjectBean {
     @Inject
     private ProjectRepository projectRepository;
-    private List<Project> projects;
+    private List<Projects> projects;
     private String name;
     private String description;
     private String category;
     private Date deadline;
-    private Project selectedProject;
+    private Projects selectedProject;
     private Date lastModifiedTimestamp;
 
     public ProjectBean() {
         projects = projectRepository.getAllProjects();
     }
 
-    public List<Project> getProjects() {
+    public List<Projects> getProjects() {
         return projects;
     }
 
@@ -38,7 +38,7 @@ public class ProjectBean {
                 lastModifiedTimestamp = new Date();
                 java.sql.Date sqlDate = new java.sql.Date(deadline.getTime());
 
-                Project project = new Project();
+                Projects project = new Projects();
                 project.setName(name);
                 project.setDescription(description);
                 project.setCategory(category);
@@ -53,7 +53,7 @@ public class ProjectBean {
         }
     }
 
-    public void openEditDialog(Project project) {
+    public void openEditDialog(Projects project) {
         selectedProject = project;
     }
 
@@ -64,7 +64,7 @@ public class ProjectBean {
             selectedProject = null;
         }
     }
-    public void deleteProject(Project project) {
+    public void deleteProject(Projects project) {
         projectRepository.deleteProject(project);
         projects.remove(project);
     }
@@ -101,11 +101,11 @@ public class ProjectBean {
         this.deadline = deadline;
     }
 
-    public Project getSelectedProject() {
+    public Projects getSelectedProject() {
         return selectedProject;
     }
 
-    public void setSelectedProject(Project selectedProject) {
+    public void setSelectedProject(Projects selectedProject) {
         this.selectedProject = selectedProject;
     }
 
