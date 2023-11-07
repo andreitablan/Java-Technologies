@@ -53,4 +53,5 @@
 - **Homework**
 	- Define the mappings using JPA-only annotations.
 	- Create named queries using JPA-QL.
- 	- Work in progress..
+ 	- Implement the repository classes.
+  	- Create a complete test unit for the CRUD operations for at least one entity class. - work in progress
