@@ -1,6 +1,6 @@
-package com.example.lab5.repository;
+package com.example.labolatory5.repository;
 
-import com.example.lab5.entity.Students;
+import com.example.labolatory5.entity.Students;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -14,7 +14,7 @@ public class StudentRepository {
     private EntityManager entityManager;
 
     public List<Students> findAllStudents() {
-        List<Students> students= entityManager.createNamedQuery("Students.findAll", Students.class).getResultList();
+        List<Students> students= entityManager.createNamedQuery("Student.findAll", Students.class).getResultList();
         if(students != null && !students.isEmpty()){
             System.out.println("Students are not empty!");
         }
@@ -25,7 +25,7 @@ public class StudentRepository {
     }
 
     public Students findStudentById(int id) {
-        return entityManager.createNamedQuery("Students.findById", Students.class)
+        return entityManager.createNamedQuery("Student.findById", Students.class)
                 .setParameter("id", id)
                 .getSingleResult();
     }

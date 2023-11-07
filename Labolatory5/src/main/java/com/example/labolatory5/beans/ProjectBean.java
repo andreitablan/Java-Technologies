@@ -1,12 +1,11 @@
-package com.example.lab5.beans;
+package com.example.labolatory5.beans;
 
-import com.example.lab5.entity.Projects;
-import com.example.lab5.repository.ProjectRepository;
+import com.example.labolatory5.entity.Projects;
+import com.example.labolatory5.repository.ProjectRepository;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -15,9 +14,9 @@ import java.util.List;
  */
 @Named
 @RequestScoped
-public class ProjectBean implements Serializable {
-
-    private ProjectRepository projectRepository = new ProjectRepository();
+public class ProjectBean {
+    @Inject
+    private ProjectRepository projectRepository;
     private List<Projects> projects;
     private String name;
     private String description;

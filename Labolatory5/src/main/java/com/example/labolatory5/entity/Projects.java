@@ -1,4 +1,4 @@
-package com.example.lab5.entity;
+package com.example.labolatory5.entity;
 
 import jakarta.persistence.*;
 
@@ -9,8 +9,8 @@ import java.util.Objects;
 @Entity
 @Table(name = "projects", schema = "public", catalog = "postgres")
 @NamedQueries({
-        @NamedQuery(name = "Projects.findAll", query = "SELECT p FROM Projects p"),
-        @NamedQuery(name = "Projects.findById", query = "SELECT p FROM Projects p WHERE p.id = :id")
+        @NamedQuery(name = "Project.findAll", query = "SELECT p FROM Projects p"),
+        @NamedQuery(name = "Project.findById", query = "SELECT p FROM Projects p WHERE p.id = :id")
 })
 public class Projects {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,8 +29,8 @@ public class Projects {
     @Basic
     @Column(name = "deadline")
     private Date deadline;
-//    @OneToMany(mappedBy = "projectsByProjectId")
-//    private Collection<StudentProjects> studentProjectsById;
+    @OneToMany(mappedBy = "projectsByProjectId")
+    private Collection<StudentProjects> studentProjectsById;
 
     public int getId() {
         return id;
@@ -85,11 +85,11 @@ public class Projects {
         return Objects.hash(id, name, category, description, deadline);
     }
 
-//    public Collection<StudentProjects> getStudentProjectsById() {
-//        return studentProjectsById;
-//    }
-//
-//    public void setStudentProjectsById(Collection<StudentProjects> studentProjectsById) {
-//        this.studentProjectsById = studentProjectsById;
-//    }
+    public Collection<StudentProjects> getStudentProjectsById() {
+        return studentProjectsById;
+    }
+
+    public void setStudentProjectsById(Collection<StudentProjects> studentProjectsById) {
+        this.studentProjectsById = studentProjectsById;
+    }
 }

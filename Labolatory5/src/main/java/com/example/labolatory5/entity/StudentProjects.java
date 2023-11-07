@@ -1,4 +1,4 @@
-package com.example.lab5.entity;
+package com.example.labolatory5.entity;
 
 import jakarta.persistence.*;
 
@@ -23,12 +23,12 @@ public class StudentProjects {
     @Id
     @Column(name = "id")
     private int id;
-//    @ManyToOne
-//    @JoinColumn(name = "student_id", referencedColumnName = "id")
-//    private Students studentsByStudentId;
-//    @ManyToOne
-//    @JoinColumn(name = "project_id", referencedColumnName = "id")
-//    private Projects projectsByProjectId;
+    @ManyToOne
+    @JoinColumn(name = "student_id", referencedColumnName = "id")
+    private Students studentsByStudentId;
+    @ManyToOne
+    @JoinColumn(name = "project_id", referencedColumnName = "id")
+    private Students projectsByProjectId;
 
     public Integer getStudentId() {
         return studentId;
@@ -67,20 +67,19 @@ public class StudentProjects {
         return Objects.hash(studentId, projectId, id);
     }
 
+    public Students getStudentsByStudentId() {
+        return studentsByStudentId;
+    }
 
-//    public Projects getProjectsByProjectId() {
-//        return projectsByProjectId;
-//    }
-//
-//    public void setProjectsByProjectId(Projects projectsByProjectId) {
-//        this.projectsByProjectId = projectsByProjectId;
-//    }
-//
-//    public Students getStudentsByStudentId() {
-//        return studentsByStudentId;
-//    }
-//
-//    public void setStudentsByStudentId(Students studentsByStudentId) {
-//        this.studentsByStudentId = studentsByStudentId;
-//    }
+    public void setStudentsByStudentId(Students studentsByStudentId) {
+        this.studentsByStudentId = studentsByStudentId;
+    }
+
+    public Students getProjectsByProjectId() {
+        return projectsByProjectId;
+    }
+
+    public void setProjectsByProjectId(Students projectsByProjectId) {
+        this.projectsByProjectId = projectsByProjectId;
+    }
 }

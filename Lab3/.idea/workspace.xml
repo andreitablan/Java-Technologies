@@ -10,12 +10,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18f947e2-7518-4998-b843-0cd832c97bc6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Lab3_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/.idea/artifacts/Labolatory5_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/.idea/artifacts/Labolatory5_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/java/com/example/labolatory5/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/java/com/example/labolatory5/beans/LocaleBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/java/com/example/labolatory5/beans/ProjectBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/java/com/example/labolatory5/beans/StudentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/java/com/example/labolatory5/entity/Projects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/java/com/example/labolatory5/entity/StudentProjects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/java/com/example/labolatory5/entity/Students.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/java/com/example/labolatory5/infrastructure/DatSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/java/com/example/labolatory5/repository/ProjectRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/java/com/example/labolatory5/repository/StudentProjectRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/java/com/example/labolatory5/repository/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labolatory5/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab5/.idea/dataSources/72bf5720-b7f2-4b83-ad14-fb5223de685f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/.idea/dataSources/72bf5720-b7f2-4b83-ad14-fb5223de685f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab5/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/beans/ProjectBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/beans/ProjectBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/beans/StudentBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/beans/StudentBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/entity/Projects.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/entity/Projects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/entity/StudentProjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/entity/StudentProjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/entity/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/entity/Students.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/repository/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/com/example/lab5/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab5/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,38 +118,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JPA.DatabaseSchemaImportDialog": "26a6b077-71ea-4250-8e6f-9966e07d8a8d",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "1.8 (4)",
-    "last_opened_file_path": "C:/GitHub/Java-Technologies/Lab5",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.17377049",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;26a6b077-71ea-4250-8e6f-9966e07d8a8d&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8 (4)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GitHub/Java-Technologies/Lab5&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.17377049&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.lab3" />
@@ -136,7 +169,92 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.9">
+    <configuration name="GlassFish 7.0.9" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.9" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="11" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Lab3:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="DOMAIN" value="domain1" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Lab3:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="DOMAIN" value="" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JBoss/WildFly 24.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 24.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -271,6 +389,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="GlassFish Server.GlassFish 7.0.9" />
+      <item itemvalue="JBoss/WildFly Server.JBoss/WildFly 24.0.1.Final" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -310,6 +432,7 @@
       <workItem from="1699304863777" duration="256000" />
       <workItem from="1699305323244" duration="322000" />
       <workItem from="1699350242706" duration="1544000" />
+      <workItem from="1699372513434" duration="2193000" />
     </task>
     <servers />
   </component>

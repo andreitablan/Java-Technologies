@@ -1,4 +1,4 @@
-package com.example.lab5.entity;
+package com.example.labolatory5.entity;
 
 import jakarta.persistence.*;
 
@@ -8,8 +8,8 @@ import java.util.Objects;
 @Entity
 @Table(name = "students", schema = "public", catalog = "postgres")
 @NamedQueries({
-        @NamedQuery(name = "Students.findAll", query = "SELECT s FROM Students s"),
-        @NamedQuery(name = "Students.findById", query = "SELECT s FROM Students s WHERE s.id = :id")
+        @NamedQuery(name = "Student.findAll", query = "SELECT s FROM Students s"),
+        @NamedQuery(name = "Student.findById", query = "SELECT s FROM Students s WHERE s.id = :id")
 })
 public class Students {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,8 +19,8 @@ public class Students {
     @Basic
     @Column(name = "name")
     private String name;
-//    @OneToMany(mappedBy = "studentsByStudentId")
-//    private Collection<StudentProjects> studentProjectsById;
+    @OneToMany(mappedBy = "studentsByStudentId")
+    private Collection<StudentProjects> studentProjectsById;
 
 
     public int getId() {
@@ -51,12 +51,4 @@ public class Students {
     public int hashCode() {
         return Objects.hash(id, name);
     }
-
-//    public Collection<StudentProjects> getStudentProjectsById() {
-//        return studentProjectsById;
-//    }
-//
-//    public void setStudentProjectsById(Collection<StudentProjects> studentProjectsById) {
-//        this.studentProjectsById = studentProjectsById;
-//    }
 }

@@ -1,15 +1,14 @@
-package com.example.lab5.beans;
+package com.example.labolatory5.beans;
 
-import com.example.lab5.entity.Projects;
-import com.example.lab5.entity.Students;
-import com.example.lab5.repository.StudentProjectRepository;
-import com.example.lab5.repository.StudentRepository;
+import com.example.labolatory5.entity.Projects;
+import com.example.labolatory5.entity.Students;
+import com.example.labolatory5.repository.StudentProjectRepository;
+import com.example.labolatory5.repository.StudentRepository;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import org.primefaces.model.DualListModel;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -19,10 +18,12 @@ import java.util.List;
  */
 @Named
 @RequestScoped
-public class StudentBean implements Serializable {
+public class StudentBean {
 
-    private StudentRepository studentRepository = new StudentRepository();
-    private StudentProjectRepository studentProjectRepository = new StudentProjectRepository();
+    @Inject
+    private StudentRepository studentRepository;
+    @Inject
+    private StudentProjectRepository studentProjectRepository;
 
     private ProjectBean projectBean;
     private String name = "";

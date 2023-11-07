@@ -1,6 +1,6 @@
-package com.example.lab5.repository;
+package com.example.labolatory5.repository;
 
-import com.example.lab5.entity.Projects;
+import com.example.labolatory5.entity.Projects;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -14,7 +14,7 @@ public class ProjectRepository {
     private EntityManager entityManager;
 
     public List<Projects> getAllProjects() {
-        List<Projects> projects =  entityManager.createNamedQuery("Projects.findAll", Projects.class).getResultList();
+        List<Projects> projects =  entityManager.createNamedQuery("Project.findAll", Projects.class).getResultList();
         if(projects != null && !projects.isEmpty()){
             System.out.println("Projects are not empty!");
         }
@@ -25,7 +25,7 @@ public class ProjectRepository {
     }
 
     public Projects getProjectById(int id) {
-        return entityManager.createNamedQuery("Projects.findById", Projects.class)
+        return entityManager.createNamedQuery("Project.findById", Projects.class)
                 .setParameter("id", id)
                 .getSingleResult();
     }
