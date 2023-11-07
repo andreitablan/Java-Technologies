@@ -10,119 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="370a7eef-3e5d-4e9f-937c-7b7ddb0d32fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab3/.idea/artifacts/Lab3_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/com/example/lab3/beans/LocaleBean.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/com/example/lab3/beans/ProjectBean.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/com/example/lab3/beans/StudentBean.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/com/example/lab3/entity/Projects.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/com/example/lab3/entity/StudentProjects.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/com/example/lab3/entity/Students.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/com/example/lab3/infrastructure/DatSource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/com/example/lab3/repository/ProjectRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/com/example/lab3/repository/StudentProjectRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/com/example/lab3/repository/StudentRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/components/messageBox.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/messages_ro.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/decorators/footer.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/decorators/header.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/decorators/lastModifiedInfo.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/decorators/menu.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/edit/dataInfo.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/edit/projectAdd.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/edit/projectEdit.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/edit/studentAdd.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/edit/studentEditName.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/edit/studentEditProjects.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/faces-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/lib/checker-qual-3.31.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/lib/jakarta.persistence-api-3.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/lib/jakarta.transaction-api-2.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/lib/org.eclipse.persistence.asm-9.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/lib/org.eclipse.persistence.core-3.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/lib/org.eclipse.persistence.jpa-3.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/lib/org.eclipse.persistence.jpa.jpql-3.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/lib/postgresql-42.6.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/lib/primefaces-12.0.0-jakarta.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/templates/dataEdit.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/templates/page.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/view/dataView.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/main.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/projects.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/students.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/entity/Projects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/entity/StudentProjects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/entity/Students.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Lab5_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Lab5_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab5/beans/LocaleBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab5/beans/ProjectBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab5/beans/StudentBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab5/infrastructure/DatSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab5/repository/ProjectRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab5/repository/StudentProjectRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab5/repository/StudentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/components/messageBox.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages_ro.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/footer.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/header.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/lastModifiedInfo.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/menu.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/edit/dataInfo.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/edit/projectAdd.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/edit/projectEdit.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/edit/studentAdd.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/edit/studentEditName.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/edit/studentEditProjects.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/dataEdit.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/page.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dataView.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/projects.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/students.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/dataSources/26a6b077-71ea-4250-8e6f-9966e07d8a8d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/dataSources/966f2ef1-20b8-4c78-ade0-9ebefae2bd16.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/dataSources/966f2ef1-20b8-4c78-ade0-9ebefae2bd16.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/.idea/artifacts/Lab3_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/artifacts/Lab3_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/beans/LocaleBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/beans/LocaleBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/beans/ProjectBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/beans/ProjectBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/beans/StudentBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/beans/StudentBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab5/entity/Projects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab5/entity/Students.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/entity/StudentProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab5/entity/StudentProjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/repository/ProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/repository/StudentProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/repository/StudentProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/java/com/example/lab3/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/webapp/WEB-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/META-INF/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72bf5720-b7f2-4b83-ad14-fb5223de685f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/72bf5720-b7f2-4b83-ad14-fb5223de685f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +51,14 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2XocHiQcJvdByyg8EPU4HFuUIxt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -173,7 +74,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/GitHub/Java-Technologies/Lab5/src/main/java/com/example/lab5",
+    "last_opened_file_path": "C:/GitHub/Java-Technologies/Lab5",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -275,6 +176,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699298788389</updated>
       <workItem from="1699298790284" duration="3402000" />
+      <workItem from="1699350996607" duration="1054000" />
     </task>
     <servers />
   </component>
