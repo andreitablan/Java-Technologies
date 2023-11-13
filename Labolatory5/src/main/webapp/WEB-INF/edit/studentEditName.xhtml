@@ -1,0 +1,15 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/WEB-INF/templates/dataEdit.xhtml">
+
+    <ui:define name="inputs">
+        <h:outputLabel for="editStudentName" value="#{msgs.studentName}" />
+        <p:inputText id="editStudentName" value="#{studentBean.selectedStudent.name}" />
+    </ui:define>
+
+    <ui:param name="header" value="#{msgs.editStudent}" />
+    <ui:param name="widgetVar" value="editStudentDialog" />
+    <ui:param name="action" value="#{studentBean.saveEditedStudent}" />
+</ui:composition>

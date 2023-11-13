@@ -1,0 +1,32 @@
+<!-- add a project -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+                template="/WEB-INF/templates/dataEdit.xhtml">
+
+    <ui:define name="inputs">
+        <p:outputLabel for="projectName" value="#{msgs.projectName}" />
+        <p:inputText id="projectName" value="#{projectBean.name}" required="true" />
+        <p:message for="projectName" />
+
+        <p:outputLabel for="projectCategory" value="#{msgs.projectCategory}" />
+        <p:selectOneMenu id="projectCategory" value="#{projectBean.category}">
+            <f:selectItem itemLabel="#{msgs.selectCategory}" itemValue="" />
+            <f:selectItem itemLabel="#{msgs.easy}" itemValue="Easy" />
+            <f:selectItem itemLabel="#{msgs.medium}" itemValue="Medium" />
+            <f:selectItem itemLabel="#{msgs.hard}" itemValue="Hard" />
+        </p:selectOneMenu>
+
+        <p:outputLabel for="projectDescription" value="#{msgs.projectDescription}" />
+        <p:inputText id="projectDescription" value="#{projectBean.description}" />
+
+        <p:outputLabel for="projectDeadline" value="#{msgs.projectDeadline}" />
+        <p:calendar id="projectDeadline" value="#{projectBean.deadline}" showOn="button" />
+    </ui:define>
+
+    <ui:param name="header" value="#{msgs.addProjectButton}" />
+    <ui:param name="lastModifiedTimestamp" value="#{projectBean.lastModifiedTimestamp}" />
+    <ui:param name="widgetVar" value="projectDialog" />
+    <ui:param name="action" value="#{projectBean.saveProject()}" />
+
+</ui:composition>
