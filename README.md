@@ -46,7 +46,7 @@
 	- Each dataEdit contains a component for displaying the timestamp of the last modification.
  
 ## Laboratory 5
-- **The same project, Lab 3**
+- **In the project: Laboratory5**
 - **Compulsory:**
 	- Define the persistence unit using a data source configured as a JDBC Resource.
  	- Define at least one entity class and perform a simple test to verify the communication with the database.
@@ -54,4 +54,8 @@
 	- Define the mappings using JPA-only annotations.
 	- Create named queries using JPA-QL.
  	- Implement the repository classes.
-  	- Create a complete test unit for the CRUD operations for at least one entity class. - work in progress
+  	- Create a complete test unit for the CRUD operations for at least one entity class. - for Project
+
+## Laboratory 6
+- Work in progress...
+
