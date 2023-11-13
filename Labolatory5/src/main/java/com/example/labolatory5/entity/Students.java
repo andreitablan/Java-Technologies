@@ -20,7 +20,6 @@ public class Students {
     @Column(name = "name")
     private String name;
     @OneToMany(mappedBy = "studentsByStudentId")
-    private Collection<StudentProjects> studentProjectsById;
 
 
     public int getId() {
