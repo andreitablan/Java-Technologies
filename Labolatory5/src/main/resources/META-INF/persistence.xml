@@ -6,6 +6,9 @@
     <persistence-unit name="default" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <jta-data-source>lab5</jta-data-source>
+        <class>com.example.laboratory5.entity.StudentProjects</class>
+        <class>com.example.laboratory5.entity.Student</class>
+        <class>com.example.laboratory5.entity.Project</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
     </persistence-unit>
 </persistence>
