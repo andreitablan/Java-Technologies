@@ -5,5 +5,7 @@
              version="3.0">
     <persistence-unit name="default">
 
+        <class>entity.Employee</class>
+        <class>entity.Student</class>
     </persistence-unit>
 </persistence>

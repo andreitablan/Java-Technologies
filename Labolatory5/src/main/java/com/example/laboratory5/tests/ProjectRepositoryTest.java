@@ -11,6 +11,9 @@ import java.sql.Date;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Test for the project repository
+ */
 public class ProjectRepositoryTest {
 
     private EntityManagerFactory emf;
@@ -36,7 +39,7 @@ public class ProjectRepositoryTest {
         em.getTransaction().begin();
         Project project = new Project();
         project.setName("ProjectA");
-        project.setCategory("CategoryA");
+        project.setCategory("Easy");
         project.setDescription("DescriptionA");
         project.setDeadline(Date.valueOf("2023-12-31"));
         em.persist(project);

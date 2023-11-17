@@ -23,6 +23,14 @@ public class StudentProjects {
     @Id
     @Column(name = "id")
     private int id;
+    @ManyToOne
+    @JoinColumn(name = "student_id", referencedColumnName = "id", insertable = false, updatable = false)
+    private Student studentByStudentId;
+
+    @ManyToOne
+    @JoinColumn(name = "project_id", referencedColumnName = "id", insertable = false, updatable = false)
+    private Project projectsByProjectId;
+
 
     public Integer getStudentId() {
         return studentId;
@@ -59,5 +67,21 @@ public class StudentProjects {
     @Override
     public int hashCode() {
         return Objects.hash(studentId, projectId, id);
+    }
+
+    public Student getStudentByStudentId() {
+        return studentByStudentId;
+    }
+
+    public void setStudentByStudentId(Student studentByStudentId) {
+        this.studentByStudentId = studentByStudentId;
+    }
+
+    public Project getProjectsByProjectId() {
+        return projectsByProjectId;
+    }
+
+    public void setProjectsByProjectId(Project projectsByProjectId) {
+        this.projectsByProjectId = projectsByProjectId;
     }
 }

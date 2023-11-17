@@ -1,6 +1,7 @@
 package com.example.laboratory5.repository;
 import com.example.laboratory5.entity.Student;
 
+import jakarta.ejb.Stateless;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -10,7 +11,7 @@ import java.util.List;
 /**
  * Repository for the student entity
  */
-@ApplicationScoped
+@Stateless
 public class StudentRepository {
 
     @PersistenceContext(unitName = "default")
@@ -33,7 +34,6 @@ public class StudentRepository {
                 .getSingleResult();
     }
 
-    @Transactional
     public Student insertStudent(String name) {
         Student student = new Student();
         student.setName(name);
@@ -41,12 +41,10 @@ public class StudentRepository {
         return student;
     }
 
-    @Transactional
     public void updateStudent(Student student) {
         entityManager.merge(student);
     }
 
-    @Transactional
     public void deleteStudent(Student student) {
         Student managedStudent = entityManager.find(Student.class, student.getId());
         if (managedStudent != null) {

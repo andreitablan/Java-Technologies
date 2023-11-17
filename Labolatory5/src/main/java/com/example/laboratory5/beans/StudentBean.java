@@ -4,6 +4,7 @@ import com.example.laboratory5.entity.Project;
 import com.example.laboratory5.entity.Student;
 import com.example.laboratory5.repository.StudentRepository;
 import com.example.laboratory5.repository.StudentProjectRepository;
+import jakarta.annotation.PostConstruct;
 import org.primefaces.model.DualListModel;
 
 import jakarta.enterprise.context.RequestScoped;
@@ -33,7 +34,8 @@ public class StudentBean {
     private Student selectedStudent;
     private Date lastModifiedTimestamp;
 
-    public StudentBean() {
+    @PostConstruct
+    public void init(){
         students = studentRepository.findAllStudents();
         projectBean = new ProjectBean();
         availableProjects = projectBean.getProjects();

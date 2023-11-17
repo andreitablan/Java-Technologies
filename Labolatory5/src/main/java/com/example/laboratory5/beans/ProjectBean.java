@@ -3,6 +3,7 @@ package com.example.laboratory5.beans;
 import com.example.laboratory5.entity.Project;
 import com.example.laboratory5.repository.ProjectRepository;
 
+import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
@@ -25,7 +26,8 @@ public class ProjectBean {
     private Project selectedProject;
     private Date lastModifiedTimestamp;
 
-    public ProjectBean() {
+    @PostConstruct
+    public void init() {
         projects = projectRepository.getAllProjects();
     }
 

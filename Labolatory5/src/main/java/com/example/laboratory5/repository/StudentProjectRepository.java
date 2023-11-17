@@ -4,6 +4,7 @@ import com.example.laboratory5.entity.Project;
 import com.example.laboratory5.entity.StudentProjects;
 import com.example.laboratory5.entity.Student;
 
+import jakarta.ejb.Stateless;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
@@ -14,7 +15,7 @@ import java.util.List;
 /**
  * Repository for the student-project entity
  */
-@ApplicationScoped
+@Stateless
 public class StudentProjectRepository {
 
     @PersistenceContext(unitName = "default")
@@ -31,7 +32,6 @@ public class StudentProjectRepository {
                 .setParameter("studentId", student.getId())
                 .executeUpdate();
     }
-    @Transactional
     public void updateStudentProjects(Student student, List<Project> projects) {
         deleteStudentProjects(student);
         for (Project project : projects) {

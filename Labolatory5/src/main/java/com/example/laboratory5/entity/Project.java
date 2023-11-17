@@ -29,7 +29,10 @@ public class Project {
     @Basic
     @Column(name = "deadline")
     private Date deadline;
-
+    @OneToMany(mappedBy = "projectsByProjectId")
+    private Collection<StudentProjects> studentProjectsById;
+    public Project(){
+    }
     public int getId() {
         return id;
     }
@@ -68,6 +71,14 @@ public class Project {
 
     public void setDeadline(Date deadline) {
         this.deadline = deadline;
+    }
+
+    public Collection<StudentProjects> getStudentProjectsById() {
+        return studentProjectsById;
+    }
+
+    public void setStudentProjectsById(Collection<StudentProjects> studentProjectsById) {
+        this.studentProjectsById = studentProjectsById;
     }
 
     @Override

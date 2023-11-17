@@ -9,6 +9,5 @@
         <class>com.example.laboratory5.entity.StudentProjects</class>
         <class>com.example.laboratory5.entity.Student</class>
         <class>com.example.laboratory5.entity.Project</class>
-        <exclude-unlisted-classes>false</exclude-unlisted-classes>
     </persistence-unit>
 </persistence>

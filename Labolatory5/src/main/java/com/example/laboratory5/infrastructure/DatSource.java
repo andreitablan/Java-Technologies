@@ -14,7 +14,7 @@ public class DatSource {
     private DatSource() {
         try {
             Context ctx = new InitialContext();
-            dataSource = (DataSource) ctx.lookup("java:/PostgresDS");
+            dataSource = (DataSource) ctx.lookup("lab5");
         } catch (Exception e) {
             e.printStackTrace();
         }

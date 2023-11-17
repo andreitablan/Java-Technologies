@@ -2,6 +2,7 @@ package com.example.laboratory5.repository;
 
 import com.example.laboratory5.entity.Project;
 
+import jakarta.ejb.Stateless;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -11,7 +12,7 @@ import java.util.List;
 /**
  * Repository for the project entity
  */
-@ApplicationScoped
+@Stateless
 public class ProjectRepository {
 
     @PersistenceContext(unitName = "default")
@@ -34,17 +35,14 @@ public class ProjectRepository {
                 .getSingleResult();
     }
 
-    @Transactional
     public void saveProject(Project project) {
         entityManager.persist(project);
     }
 
-    @Transactional
     public void updateProject(Project project) {
         entityManager.merge(project);
     }
 
-    @Transactional
     public void deleteProject(Project project) {
         Project managedProject = entityManager.find(Project.class, project.getId());
         if (managedProject != null) {

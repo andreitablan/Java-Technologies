@@ -19,7 +19,10 @@ public class Student {
     @Basic
     @Column(name = "name")
     private String name;
-
+    @OneToMany(mappedBy = "studentByStudentId")
+    private Collection<StudentProjects> studentProjectsById;
+    public Student(){
+    }
     public int getId() {
         return id;
     }
@@ -34,6 +37,14 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Collection<StudentProjects> getStudentProjectsById() {
+        return studentProjectsById;
+    }
+
+    public void setStudentProjectsById(Collection<StudentProjects> studentProjectsById) {
+        this.studentProjectsById = studentProjectsById;
     }
 
     @Override
