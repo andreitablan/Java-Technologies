@@ -3,6 +3,7 @@ import com.example.laboratory5.entity.Student;
 
 import jakarta.ejb.Stateless;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
@@ -11,21 +12,27 @@ import java.util.List;
 /**
  * Repository for the student entity
  */
-@Stateless
+@RequestScoped
 public class StudentRepository {
 
     @PersistenceContext(unitName = "default")
     private EntityManager entityManager;
 
     public List<Student> findAllStudents() {
-        List<Student> students= entityManager.createNamedQuery("Student.findAll", Student.class).getResultList();
-        if(students != null && !students.isEmpty()){
-            System.out.println("Students are not empty!");
+        try{
+            List<Student> students= entityManager.createNamedQuery("Student.findAll", Student.class).getResultList();
+            if(students != null && !students.isEmpty()){
+                System.out.println("Students are not empty!");
+            }
+            else {
+                System.out.println("Students are empty!");
+            }
+            return students;
         }
-        else {
-            System.out.println("Students are empty!");
+        catch (Exception e){
+            System.out.println("Exception in findAllStudents: "+e.getMessage());
         }
-        return students;
+        return null;
     }
 
     public Student findStudentById(int id) {

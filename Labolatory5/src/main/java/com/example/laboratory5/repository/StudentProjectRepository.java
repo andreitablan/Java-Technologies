@@ -6,6 +6,7 @@ import com.example.laboratory5.entity.Student;
 
 import jakarta.ejb.Stateless;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.PersistenceContext;
@@ -15,7 +16,7 @@ import java.util.List;
 /**
  * Repository for the student-project entity
  */
-@Stateless
+@RequestScoped
 public class StudentProjectRepository {
 
     @PersistenceContext(unitName = "default")
